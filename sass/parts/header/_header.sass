@@ -1,0 +1,54 @@
+// #header
+
+header
+    position: relative
+    width: 100%
+    height: auto
+
+.top_header_block
+    background-color: #FFFFFF
+    width: 100%
+    .inner_block
+        display: flex
+        justify-content: space-between
+        height: 68px
+    .header_logo
+        display: flex
+        width: 100%
+        max-width: 202.35px
+        align-items: center
+        a
+            display: flex
+            align-self: center
+        img
+            align-self: center
+    .right_top_block
+        width: 100%
+        max-width: 438px
+        display: flex
+        justify-content: space-between
+        align-self: center
+    .btn_block
+        align-self: center
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+.bottom_header_block
+    background-color: $color-blue
+    min-height: 56px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    nav
+        padding-top: 18.5px
+        padding-bottom: 18.5px
+    ul
+        display: flex
+        justify-content: space-between
+    a
+        color: white
+        font-size: 16px
+        line-height: 120%
+        text-transform: uppercase
+        transition: .3s
+        &:hover
+            opacity: 0.7
+            transition: .3s

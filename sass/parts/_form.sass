@@ -1,0 +1,91 @@
+// .form
+// 	.nf-form-cont *
+// 		font-family: $font-family-base
+// 	.nf-form-wrap
+// 		.nf-before-form-content
+// 			display: none
+// 	.nf-form-content
+// 		padding: 0
+// 		input[type=text],input[type=email],input[type=tel],textarea
+// 			-webkit-appearence: none
+// 			background: $color-bg-light
+// 			border: 1px solid #F7F8FA
+// 			border-radius: 4px
+// 			font-size: 16px
+// 			font-weight: 600
+// 			padding: 14px 20px
+// 			height: 48px
+// 			color: transparentize($default-text-color, 0.6)
+// 			transition: 0.3s
+// 			+max-screen($breakpoint-sm)
+
+// 			&:focus
+// 				color: transparentize($default-text-color, 0.4)
+// 				border: 1px solid transparentize($default-text-color, 0.3)
+// 			&::placeholder
+// 				color: transparentize($default-text-color, 0.7)
+// 		textarea
+// 			resize: none
+
+// 		.submit-wrap
+// 			.nf-field-label
+// 				display: none
+// 			input,button
+// 				position: relative
+// 				display: inline-block
+// 				box-sizing: border-box
+// 				transition: 0.3s
+// 				font-weight: 600
+
+// 				background-color: $color-primary
+// 				color: #fff
+// 				border: 0px
+// 				border-radius: 4px
+
+// 				height: 48px
+// 				padding: 14px
+// 				font-size: 14px
+// 				line-height: 14px
+// 				letter-spacing: 0.5px
+// 				text-align: center
+// 				transition: 0.3s ease-out
+// 				cursor: pointer
+// 				&:hover
+// 					background-color: $color-black
+// 					color: #fff
+// 		.nf-field-label
+// 			margin-bottom: 11px
+// 			display: none
+// 			label
+// 				font-size: 14px
+// 				line-height: 14px
+// 				text-transform: uppercase
+// 				font-weight: 500
+// 				color: #fff
+// 				.ninja-forms-req-symbol
+// 					display: none
+// 	.nf-error .nf-error-msg, .nf-error-msg
+// 		font-size: 12px
+
+// .form--newsletter
+// 	h4
+// 		padding-bottom: 30px
+// 	.nf-form-content
+// 		nf-fields-wrap
+// 		display: flex
+// 		.nf-field-container
+// 			margin-bottom: 0
+// 			nf-field
+// 			width: 100%
+// 			&:nth-child(1)
+// 				width: 100%
+// 				+max-screen($breakpoint-sm)
+// 					width: 100%
+// 				&:nth-child(2)
+// 					width: auto
+// 					min-width: 105px
+// 		.nf-field-label
+// 			margin-bottom: 5px
+// textarea, input
+// 	font-size: 19px
+// 	font-weight: 400

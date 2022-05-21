@@ -1,0 +1,85 @@
+#main
+	width: 100%
+	overflow: hidden
+	min-height: calc(100vh - 273px)
+	+max-screen($breakpoint-sm)
+
+#app-wrapper
+	// padding-top: 115px
+	// padding-bottom: 15px
+	.header-transparent &
+		padding-top: 0
+
+.divider
+	display: block
+	height: 1px
+	background: cfd0d2
+
+.app-container--y--middle
+	display: flex
+	flex-direction: column
+	justify-content: center
+img
+	width: 100%
+	height: auto
+	// object-fit: cover
+iframe
+	border: 0
+	margin-top: 35px
+
+.lottie
+	width: 100%
+	svg
+		width: 100%
+		height: auto
+
+.bg
+	&--primary
+		background-color: $color-primary
+	&--white
+		background-color: #fff
+	&--black
+		// background-color: $color-black
+	&--dark
+		// background-color: $color-bg-dark
+	&--light
+		// background-color: $color-bg-light
+	&--gradient
+		// background: $color-bg-gradient
+
+.section-bg
+	width: 100vw
+	height: 100%
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: calc(-1 * (100vw / 2))
+	z-index: -1
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+.col-sm-6
+	padding-left: 15px
+	padding-right: 15px
+	+min-screen($breakpoint-sm)
+		max-width: 50%
+		flex: 0 0 50%
+
+.img
+	&_36
+		width: 36px
+		height: 36px
+
+.title_wrapper
+	position: relative
+	width: 100%
+	padding-bottom: 40px
+	&::after
+		position: absolute
+		content: ''
+		height: 1px
+		width: 100%
+		bottom: 0
+		left: 0
+		background-color: $color-blue

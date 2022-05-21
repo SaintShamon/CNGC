@@ -1,0 +1,25 @@
+.slick-prev,
+.slick-next 
+    font-size: 0
+    background-color: transparent 
+    background-image: url('../assets/images/partners_slider_arrow.png')
+    position: absolute
+    top: 50%
+    width: 17px
+    height: 27px
+    border: 0
+    +max-screen($breakpoint-md)
+        z-index: 2
+        background-size: contain
+        width: 14px 
+        height: 22px
+.slick-next 
+    right: 0
+    transform: translateY(-50%)
+    +max-screen($breakpoint-md)
+        right: -10px
+.slick-prev 
+    left: 0
+    transform: rotate(180deg) translateY(50%)
+    +max-screen($breakpoint-md)
+        left: -10px

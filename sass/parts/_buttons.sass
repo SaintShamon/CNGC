@@ -1,0 +1,171 @@
+.button
+    --webkit-appearence: none
+    position: relative
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    transition: 0.3s
+    font-weight: 500
+    font-size: 13px
+    line-height: 120%
+    width: fit-content
+    justify-content: center
+    margin-left: auto
+    margin-right: auto
+    padding: 12px 40px
+    background-color: white
+    color: $color-blue
+    min-height: 44px
+    border: 1px solid $color-blue
+    border-radius: 37px
+    text-align: center
+    text-transform: uppercase
+    transition: 0.3s ease-out
+    +min-screen(2200px)
+
+    +max-screen($breakpoint-xl)
+
+    +max-screen($breakpoint-md)
+    // svg
+    //     width: 24px
+    //     height: 24px
+    //     margin-right: 12px
+    &:hover
+        background-color: $color-blue
+        color: white
+    &:disabled,
+    &[disabled=disabled],
+    &[disabled]
+        background-color: #F5F5F5
+        // color: $color-grey
+    &--secondary
+        // border: 1px solid $color-grey
+        color: white
+        background-color: $color-blue
+        // svg
+        //     path
+        //         fill: rgba( 0, 0, 0, 0.85 )
+        //         transition: .3s
+        &:hover
+            // svg
+            //     path
+            //         fill: #E50C4F
+        &:hover
+            color: $color-blue
+            border: 1px solid $color-blue
+            background-color: white
+        &:active,
+        &:focus
+            // color: $color-primary
+            // border-color: $color-primary
+            background-color: white
+        &:disabled,
+        &[disabled=disabled],
+        &[disabled]
+            background-color: #F5F5F5
+            // color: $color-grey
+
+    &--text
+        background-color: transparent
+        color: white
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        svg
+            path
+                fill: rgba( 0, 0, 0, 0.85 )
+                transition: .3s
+        &:hover
+            background-color: #FAFAFA
+            color: $color-blue
+            border: none
+        &:active,
+        &:focus
+            color: black
+            border-color: transparent
+            background-color: #F5F5F5
+        &:disabled,
+        &[disabled=disabled],
+        &[disabled]
+            background-color: transparent
+            // color: $color-grey
+
+    &--white, .text-color-white &, .text-color-white .content-block &
+        background-color: #ffffff
+        // color: $color-primary
+        border: 1px solid #ffffff
+        .button__text
+            // color: $color-primary
+        &:hover
+            background-color: transparent
+            color: #fff
+            .button__text
+                color: #fff
+    &--outline
+        // border: 1px solid $color-primary
+        background: #fff
+        // color: $color-primary
+        &.grey
+            // border: 4px solid $color-d-gray
+            // color: $color-d-gray
+            padding: 17px 58px
+            background-color: transparent
+            +min-screen(2200px)
+                padding: 21px 69px
+            +max-screen($breakpoint-md)
+                border: 2px solid #747474
+            &:hover
+                color: white
+                // border-color: $color-d-gray
+                // background-color: $color-d-gray
+                opacity: 1
+    &--sm
+        padding-top: 4px
+        padding-bottom: 4px
+        padding-left: 36px
+        padding-right: 36px
+        font-size: 16px
+        line-height: 1.5
+        +max-screen($breakpoint-lg)
+            padding: 3px 16px
+        +max-screen($breakpoint-md)
+            padding: 2px 12px
+    &--md
+        padding: 12px 38px
+        font-size: 20px
+        line-height: 1.2
+        +max-screen($breakpoint-lg)
+            padding: 8px 18px
+        +max-screen($breakpoint-md)
+            padding: 6px 14px
+    &--lg
+        padding: 28px 38px 28px 48px
+        font-size: 15px
+        line-height: 120%
+        +max-screen($breakpoint-lg)
+            // padding: 14px 32px
+        +max-screen($breakpoint-md)
+            // padding: 10px 24px
+    &--xl
+        font-size: 30px
+        min-width: 345px
+        padding: 16.5px 30px
+        +max-screen($breakpoint-lg)
+            font-size: 24px
+            padding: 16px 30px
+            min-width: 245px
+        +max-screen($breakpoint-md)
+            font-size: 20px
+            padding: 14px 30px
+            min-width: 185px
+
+.buttonsBlock
+    &__inner
+        margin-left: -5px
+        margin-right: -5px
+        display: flex
+        flex-wrap: wrap
+        .buttonsBlock--center &
+            justify-content: center
+        .buttonsBlock--right &
+            justify-content: flex-end
+    .button
+        margin: 5px
