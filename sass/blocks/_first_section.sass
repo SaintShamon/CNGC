@@ -1,6 +1,9 @@
 // first_section
 
 .first_section
+    overflow: hidden
+    padding-top: 0
+    padding-bottom: 95px
     .section-bg
         background-color: $color-blue
 
@@ -16,6 +19,80 @@
 
     .block_wrapper
         margin-top: 80px
+        display: flex
+        justify-content: space-between
+
+        a
+            margin-right: 0
+
     .subtitle
+        align-self: center
+        width: 100%
+        max-width: 327px
         p
             font-size: 22px
+    .bottom_wrapper
+        margin-top: 184px
+        display: flex
+        justify-content: space-between
+
+    .arrow_block
+        width: max-content
+        align-self: center
+    .socials_block
+        display: flex
+        align-self: center
+        ul
+            display: flex
+            align-self: center
+        li
+            margin-right: 24px
+            align-self: center
+            &:last-of-type
+                margin-right: 0
+        a
+            display: flex
+            border: 1px solid rgba(255, 255, 255, 0.4)
+            border-radius: 50%
+            background: none
+            &:hover
+                background: #fff
+                transition: .3s
+
+                path
+                    fill: $color-blue
+                    transition: .3s
+
+        svg
+            align-self: center
+            margin: 0 auto
+        path
+            fill: white
+            transition: .3s
+
+    .slider_block
+        position: absolute
+        width: 100%
+        max-width: 894px
+        height: calc(100% + 0)
+        bottom: 0
+        right: 50%
+        margin-right: calc(-1 * (100vw / 2))
+        z-index: 1
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        border-bottom-right-radius: 100px
+
+    .slider_block__list
+        margin-top: -90px
+        border-bottom-right-radius: 50%
+        border-bottom-left-radius: 0
+        display: block
+        overflow: hidden
+    .right_work_img
+        position: absolute
+        width: 124px
+        right: 20px
+        bottom: 80px
+        z-index: 2

@@ -11,9 +11,15 @@ import {
     header
 } from './template-parts/header/header';
 
+
 //animations
 
 //blocks
+
+import {
+    first_slider
+} from './template-parts/parts/first-section';
+
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -51,8 +57,10 @@ lottie();
 // appearence();
 
 //blocks
+
 // videoBlock();
 // testimonialsSlider();
 // blogAjax();
 // textTabs();
-scrollToAnchor();
+// scrollToAnchor();
+first_slider();

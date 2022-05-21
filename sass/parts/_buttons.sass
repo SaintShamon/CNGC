@@ -68,15 +68,23 @@
     &--text
         background-color: transparent
         color: white
+        border-radius: 60px
         border: 1px solid rgba(255, 255, 255, 0.3)
         svg
+            width: 24px
+            height: 24px
+            margin-left: 40px
             path
-                fill: rgba( 0, 0, 0, 0.85 )
+                fill: #fff
                 transition: .3s
         &:hover
             background-color: #FAFAFA
             color: $color-blue
-            border: none
+            border: 1px solid #FAFAFA
+            svg
+                path
+                    fill: $color-blue
+                    transition: .3s
         &:active,
         &:focus
             color: black
@@ -169,3 +177,30 @@
             justify-content: flex-end
     .button
         margin: 5px
+
+.arrow_block
+    .btn
+        width: 66px
+        height: 66px
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        border-radius: 60px
+        background: none
+
+        path
+            fill: white
+            transition: .3s
+
+        &:hover
+            background: white
+            transition: .3s
+            path
+                fill: $color-blue
+
+    .prev_btn
+        margin-right: 10px
+        svg
+            transform: rotate(90deg)
+
+    .next_btn
+        svg
+            transform: rotate(-90deg)
