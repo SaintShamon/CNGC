@@ -20,6 +20,10 @@ import {
     first_slider
 } from './template-parts/parts/first-section';
 
+import {
+    programs_slider
+} from './template-parts/parts/programs-section';
+
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -64,3 +68,4 @@ lottie();
 // textTabs();
 // scrollToAnchor();
 first_slider();
+programs_slider();
