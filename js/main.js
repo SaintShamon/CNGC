@@ -28,6 +28,10 @@ import {
     reviews_slider
 } from './template-parts/parts/reviews';
 
+import {
+    sponsors_slider
+} from './template-parts/parts/sponsors-section';
+
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -74,3 +78,4 @@ lottie();
 first_slider();
 programs_slider();
 reviews_slider();
+sponsors_slider();
