@@ -1,0 +1,67 @@
+// involved_section
+
+.involved
+    .content_wrapper
+        margin-top: 60px
+    p.subtitle
+        display: block
+        text-align: center
+        font-size: 26px
+        line-height: 140%
+        max-width: 773px
+        width: 100%
+        margin: 0 auto
+    .involved_wrapper
+        margin-top: 60px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 30px
+    .inner_block
+        display: flex
+        &:nth-of-type(3),
+        &:nth-of-type(4)
+            .service_block
+                order: 2
+                margin-right: 0
+                &.img_block
+                    order: 1
+                &:last-of-type
+                    margin-right: 30px
+
+    .service_block
+        display: flex
+        flex-direction: column
+        position: relative
+        border-radius: 60px
+        width: 100%
+        max-width: 337px
+        height: 377px
+        background: #FFFFFF
+        overflow: hidden
+        margin-right: 30px
+        padding: 40px
+        box-sizing: border-box
+        p
+            text-align: center
+            font-size: 26px
+            line-height: 140%
+            margin-bottom: 10px
+        &:last-of-type
+            margin-right: 0
+        &.img_block
+            padding: 0
+            background: none
+            img
+                object-fit: cover
+    .text
+        margin-top: 20px
+        p
+            font-size: 20px
+            line-height: 140%
+    a.button
+        margin-top: auto
+        font-size: 15px
+        line-height: 120%
+        width: 100%
+        padding: 22px 44px
+        align-self: flex-end
