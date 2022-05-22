@@ -24,6 +24,10 @@ import {
     programs_slider
 } from './template-parts/parts/programs-section';
 
+import {
+    reviews_slider
+} from './template-parts/parts/reviews';
+
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -69,3 +73,4 @@ lottie();
 // scrollToAnchor();
 first_slider();
 programs_slider();
+reviews_slider();

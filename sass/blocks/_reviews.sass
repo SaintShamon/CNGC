@@ -1,1 +1,39 @@
 // reviews_block
+
+.reviews
+    .reviews_row
+        margin-top: 60px
+    .inner_block
+
+        box-sizing: border-box
+        padding: 80px
+        border: 1px solid rgba(8, 64, 116, 0.3)
+        border-radius: 60px
+        svg
+            width: 80px
+            height: 64px
+            margin-right: 40px
+            margin-bottom: 80px
+            float: left
+
+        path
+            fill: #084074
+            opacity: 0.6
+        p
+            font-weight: 700
+            font-size: 26px
+            line-height: 140%
+            color: $color-blue
+    .slick-list
+        overflow: inherit
+        padding: 0 20% 0 20%
+    .slick-slide
+        margin-right: 31px
+        &.slick-current
+            .inner_block
+                background-color: $color-blue
+                p
+                    color: #fff
+                path
+                    fill: #fff
+                    opacity: 0.6
