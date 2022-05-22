@@ -32,6 +32,10 @@ import {
     sponsors_slider
 } from './template-parts/parts/sponsors-section';
 
+import {
+    form_section
+} from './template-parts/parts/form-section';
+
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -79,3 +83,4 @@ first_slider();
 programs_slider();
 reviews_slider();
 sponsors_slider();
+form_section()

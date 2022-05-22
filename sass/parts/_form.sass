@@ -1,91 +1,102 @@
-// .form
-// 	.nf-form-cont *
-// 		font-family: $font-family-base
-// 	.nf-form-wrap
-// 		.nf-before-form-content
-// 			display: none
-// 	.nf-form-content
-// 		padding: 0
-// 		input[type=text],input[type=email],input[type=tel],textarea
-// 			-webkit-appearence: none
-// 			background: $color-bg-light
-// 			border: 1px solid #F7F8FA
-// 			border-radius: 4px
-// 			font-size: 16px
-// 			font-weight: 600
-// 			padding: 14px 20px
-// 			height: 48px
-// 			color: transparentize($default-text-color, 0.6)
-// 			transition: 0.3s
-// 			+max-screen($breakpoint-sm)
+.form
+    .nf-form-cont *
+        font-family: $font-family-base
+    .nf-form-wrap
+        .nf-before-form-content
+            display: none
+    .nf-form-content
+        padding: 0
+        input[type=text],input[type=email],input[type=tel],textarea
+            -webkit-appearence: none
+            font-family: $font-family-base
+            background: white
+            border: 1px solid $color-blue
+            border-radius: 69px
+            font-size: 20px
+            font-weight: 400
+            padding: 17px 30px
+            height: 62px
+            color: transparentize($default-text-color, 0.4)
+            transition: 0.3s
+            +max-screen($breakpoint-sm)
 
-// 			&:focus
-// 				color: transparentize($default-text-color, 0.4)
-// 				border: 1px solid transparentize($default-text-color, 0.3)
-// 			&::placeholder
-// 				color: transparentize($default-text-color, 0.7)
-// 		textarea
-// 			resize: none
+            &:focus
+                color: transparentize($default-text-color, 0.4)
+                border: 1px solid transparentize($default-text-color, 0.3)
+            &::placeholder
+                color: transparentize($default-text-color, 0.4)
+        textarea
+            resize: none
+            height: auto
+            border-radius: 30px
 
-// 		.submit-wrap
-// 			.nf-field-label
-// 				display: none
-// 			input,button
-// 				position: relative
-// 				display: inline-block
-// 				box-sizing: border-box
-// 				transition: 0.3s
-// 				font-weight: 600
+        .submit-wrap
+            .nf-field-label
+                display: none
+            input[type=submit],button
+                position: relative
+                display: inline-block
+                box-sizing: border-box
+                color: white
+                background-color: $color-blue
+                border: 1px solid $color-blue
+                border-radius: 69px
+                font-weight: 400
+                padding: 22px 44px
+                height: 62px
+                text-align: center
+                transition: 0.3s ease-out
+                font-size: 15px
+                line-height: 120%
+                text-transform: uppercase
+                cursor: pointer
 
-// 				background-color: $color-primary
-// 				color: #fff
-// 				border: 0px
-// 				border-radius: 4px
+        .nf-field-label
+            margin-bottom: 11px
+            display: none
+            label
+                font-size: 14px
+                line-height: 14px
+                text-transform: uppercase
+                font-weight: 500
+                color: #fff
+                .ninja-forms-req-symbol
+                    display: none
+    .nf-error .nf-error-msg, .nf-error-msg
+        font-size: 12px
+    .nf-radio-wrap
+        display: flex
+        margin-bottom: 10px
+        &:last-of-type
+            margin-bottom: 0
 
-// 				height: 48px
-// 				padding: 14px
-// 				font-size: 14px
-// 				line-height: 14px
-// 				letter-spacing: 0.5px
-// 				text-align: center
-// 				transition: 0.3s ease-out
-// 				cursor: pointer
-// 				&:hover
-// 					background-color: $color-black
-// 					color: #fff
-// 		.nf-field-label
-// 			margin-bottom: 11px
-// 			display: none
-// 			label
-// 				font-size: 14px
-// 				line-height: 14px
-// 				text-transform: uppercase
-// 				font-weight: 500
-// 				color: #fff
-// 				.ninja-forms-req-symbol
-// 					display: none
-// 	.nf-error .nf-error-msg, .nf-error-msg
-// 		font-size: 12px
+        input
+            width: 20px
+            height: 20px
+        label,
+        input
+            align-self: center
+            color: $color-blue
+            cursor: pointer
+        label
+            margin-left: 10px
 
-// .form--newsletter
-// 	h4
-// 		padding-bottom: 30px
-// 	.nf-form-content
-// 		nf-fields-wrap
-// 		display: flex
-// 		.nf-field-container
-// 			margin-bottom: 0
-// 			nf-field
-// 			width: 100%
-// 			&:nth-child(1)
-// 				width: 100%
-// 				+max-screen($breakpoint-sm)
-// 					width: 100%
-// 				&:nth-child(2)
-// 					width: auto
-// 					min-width: 105px
-// 		.nf-field-label
-// 			margin-bottom: 5px
-// textarea, input
-// 	font-size: 19px
-// 	font-weight: 400
+.form--newsletter
+    h4
+        padding-bottom: 30px
+    .nf-form-content
+        .nf-fields-wrap
+            display: flex
+        .nf-field-container
+            margin-bottom: 0
+            .nf-field
+                width: 100%
+            &:nth-child(1)
+                width: 100%
+                +max-screen($breakpoint-sm)
+                    width: 100%
+                &:nth-child(2)
+                    width: auto
+                    min-width: 105px
+        .nf-field-label
+            margin-bottom: 5px
