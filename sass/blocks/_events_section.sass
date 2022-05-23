@@ -13,7 +13,7 @@
         box-sizing: border-box
         position: relative
         width: 100%
-        max-width: 460px
+        max-width: 440px
         height: 505px
         background: #FFFFFF
         border-radius: 60px
@@ -65,3 +65,54 @@
             font-weight: 700
             font-size: 26px
             line-height: 140%
+
++max-screen($breakpoint-1920)
+
++max-screen($breakpoint-xxl)
+
++max-screen($breakpoint-1500)
+    .events_section
+        .event_block
+            max-width: 360px
+            height: 455px
+
++max-screen($breakpoint-xl)
+    .events_section
+        .event_block
+            height: 455px
+            padding: 30px
+        .date
+            left: 30px
+            span
+                font-size: 72px
+        .time
+            span.year
+                margin-bottom: 40px
+
++max-screen($breakpoint-1200)
+    .events_section
+        .events_row
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+        .event_block
+            margin: 0 auto
+        .content_wrapper
+            margin-top: 40px
++max-screen(1100px)
+
++max-screen(1025px)
+
++max-screen($breakpoint-lg)
+
++max-screen($breakpoint-md)
+    .events_section
+        .events_row
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 20px
++max-screen($breakpoint-sm)
+    .events_section
+        .title_event
+            p
+                font-size: 20px

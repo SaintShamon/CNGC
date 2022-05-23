@@ -32,9 +32,9 @@ import {
     sponsors_slider
 } from './template-parts/parts/sponsors-section';
 
-import {
-    form_section
-} from './template-parts/parts/form-section';
+// import {
+//     form_section
+// } from './template-parts/parts/form-section';
 
 // import {
 //     videoBlock
@@ -83,4 +83,4 @@ first_slider();
 programs_slider();
 reviews_slider();
 sponsors_slider();
-form_section()
+// form_section()

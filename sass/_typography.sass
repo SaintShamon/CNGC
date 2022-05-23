@@ -20,7 +20,8 @@ body
 	::selection
 		color: $color-primary
 		background: transparent
-
+	+max-screen($breakpoint-1500)
+		font-size: 16px
 .text
 	&--style
 
@@ -137,6 +138,8 @@ h1,.h1
 	font-family: $font-family-secondary
 	+max-screen(1800px)
 		font-size: 92px
+	+max-screen(1500px)
+		font-size: 82px
 	+max-screen($breakpoint-xl)
 		font-size: 72px
 	+max-screen(1200px)

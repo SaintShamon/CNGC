@@ -42,8 +42,17 @@
                 fill: #979FA6
 
     .slick-list
-        padding: 0 134px 0 0
+        overflow: hidden
+        // padding: 0 20% 0 20%
 
     .slick-slide
         margin-right: 40px
-        width: 268px !important
+
++max-screen($breakpoint-1200)
+    .sponsors
+        .sponsors_row
+            margin-top: 40px
++max-screen($breakpoint-sm)
+    .sponsors
+        .slick-slide
+            margin-right: 0

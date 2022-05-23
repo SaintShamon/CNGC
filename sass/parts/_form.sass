@@ -25,6 +25,11 @@
                 border: 1px solid transparentize($default-text-color, 0.3)
             &::placeholder
                 color: transparentize($default-text-color, 0.4)
+            +max-screen($breakpoint-xl)
+                font-size: 16px
+                font-weight: 400
+                padding: 13px 24px
+                height: 52px
         textarea
             resize: none
             height: auto

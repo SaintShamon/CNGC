@@ -17,6 +17,33 @@ function sponsors_slider() {
             speed: 500,
             cssEase: 'linear',
             autoplay: false,
+            responsive: [{
+                    breakpoint: 1500,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 1368,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                        // centerMode: true,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        // centerMode: true,
+                    }
+                }
+            ]
         });
 
     });

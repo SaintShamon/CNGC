@@ -17,6 +17,7 @@ function reviews_slider() {
             speed: 500,
             initialSlide: 1,
             autoplay: false,
+
         });
 
     });

@@ -10,17 +10,31 @@ function programs_slider() {
         slider.slick({
             dots: true,
             arrows: false,
-            // centerMode: true,
-            // centerPadding: '60px',
             slidesToShow: 4,
             infinite: false,
             speed: 500,
             cssEase: 'linear',
-            // adaptiveHeight: true,
             autoplay: false,
-            // autoplaySpeed: 3000,
-            // prevArrow: block.find('.bottom_wrapper .arrow_block .prev_btn'),
-            // nextArrow: block.find('.bottom_wrapper .arrow_block .next_btn')
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        // centerMode: true,
+                    }
+                }
+            ]
         });
 
     });

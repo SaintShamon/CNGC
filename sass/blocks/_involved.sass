@@ -54,6 +54,7 @@
             background: none
             img
                 object-fit: cover
+                height: 100%
     .text
         margin-top: 20px
         p
@@ -66,3 +67,61 @@
         width: 100%
         padding: 22px 44px
         align-self: flex-end
+
++max-screen($breakpoint-1920)
+
++max-screen($breakpoint-xxl)
+
++max-screen($breakpoint-1500)
+    .involved
+        .service_block
+            max-width: 287px
++max-screen($breakpoint-xl)
+    .involved
+        .service_block
+            width: 100%
+            max-width: 337px
+        .involved_wrapper
+            margin-top: 40px
+            display: grid
+            grid-template-columns: repeat(1,1fr)
+            gap: 30px
+        .inner_block
+            margin: 0 auto
+
++max-screen($breakpoint-1200)
+
++max-screen(1100px)
+
++max-screen(1025px)
+
++max-screen($breakpoint-lg)
+
++max-screen($breakpoint-md)
+    .involved
+        .service_block
+            max-width: 287px
++max-screen(700px)
+    .involved
+        .service_block
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 30px
+            width: 100%
+            max-width: 337px
+            &:last-of-type
+                margin-bottom: 0
+        .inner_block
+            flex-direction: column
+            &:nth-of-type(3),
+            &:nth-of-type(4)
+                .service_block
+                    margin-left: auto
+                    margin-right: auto
+                    order: 1
+                    margin-right: 0
+                    &.img_block
+                        order: 2
+                    &:last-of-type
+                        margin-left: auto
+                        margin-right: auto
