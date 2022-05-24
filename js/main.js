@@ -10,7 +10,9 @@ import {
 import {
     header
 } from './template-parts/header/header';
-
+import {
+    footer
+} from './template-parts/footer/footer';
 
 //animations
 
@@ -66,6 +68,7 @@ import {
 
 
 header();
+footer();
 lazy();
 lottie();
 
