@@ -160,6 +160,17 @@ header
             color: $color-blue
     li.has-sub-menu
         position: relative
+        &::after
+            position: absolute
+            content: ''
+            width: 8px
+            height: 4px
+            right: -10px
+            top: calc( 50% - 2px )
+            background-image: url('/assets/images/arrow-menu.svg')
+            background-size: cover
+            background-repeat: no-repeat
+
     li.has-sub-menu:hover > ul,
     li.has-sub-menu:focus-within > ul,
     li.has-sub-menu ul:hover
