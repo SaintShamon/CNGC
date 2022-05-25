@@ -64,12 +64,8 @@
         right: 50%
         margin-right: calc(-1 * (100vw / 2))
         z-index: 1
-        background-position: center
-        background-size: cover
-        background-repeat: no-repeat
-        border-bottom-right-radius: 100px
-        // img
-        //     height: 100%
+        border-bottom-right-radius: 50%
+        background-blend-mode: soft-light, normal
 
     .right_work_img
         position: absolute
@@ -126,8 +122,6 @@
     .inner_first_section
         .text_block
             max-width: 400px
-        // .img_block
-        //     max-width: 474px
 
 +max-screen(1025px)
     .inner_first_section
@@ -148,6 +142,8 @@
             margin-right: 0
             right: auto
             max-width: 100vw
+            height: 500px
+            border-bottom-right-radius: 0
             &::after
                 position: absolute
                 content: ''
@@ -197,6 +193,8 @@
             margin-right: 0
             right: auto
             max-width: 100vw
+            height: calc( 100vw / 1.5 )
+            border-bottom-right-radius: 50%
             &::after
                 display: none
         .text_block
