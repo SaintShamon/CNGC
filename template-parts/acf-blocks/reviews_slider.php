@@ -32,7 +32,7 @@
                     </svg>
                     <p><?php the_content(); ?></p>
                 </div>
-            <?php endwhile; ?>
+            <?php endwhile; wp_reset_postdata(  ); ?>
         </div>
     <?php endif; ?>
 </section>
