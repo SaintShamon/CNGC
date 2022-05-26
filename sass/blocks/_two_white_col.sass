@@ -1,0 +1,63 @@
+.two_white_col
+    .main_block
+        display: flex
+        justify-content: space-between
+    .col
+        width: 100%
+        max-width: 705px
+        min-height: 540px
+        padding: 40px
+        background: #FFFFFF
+        border-radius: 60px
+        margin-right: 30px
+        h4,.h4
+            font-family: $font-family-base
+            font-size: 26px
+            margin-bottom: 40px
+            font-weight: 700
+        p
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+        &:last-of-type
+            margin-right: 0
+
++max-screen($breakpoint-1920)
+
++max-screen($breakpoint-xxl)
+
++max-screen($breakpoint-1500)
+
++max-screen($breakpoint-xl)
+
++max-screen($breakpoint-1200)
+
++max-screen(1100px)
+    .two_white_col
+        .col
+            h4,.h4
+                font-family: $font-family-base
+                font-size: 20px
+                margin-bottom: 30px
+                font-weight: 700
+            p
+                margin-bottom: 30px
+                &:last-of-type
+                    margin-bottom: 0
+            &:last-of-type
+                margin-right: 0
++max-screen(1025px)
+    .two_white_col
+        .main_block
+            flex-direction: column
+        .col
+            margin: 0 auto 30px
+            min-height: 440px
+            &:last-of-type
+                margin: 0 auto 0
+
++max-screen($breakpoint-lg)
+
++max-screen($breakpoint-md)
+
++max-screen($breakpoint-sm)

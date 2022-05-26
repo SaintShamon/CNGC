@@ -1,0 +1,124 @@
+//become_sponsor
+.become_sponsor
+    .become_sponsor_wrapper
+        margin-top: 60px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 30px
+    .sponsors_block
+        --pading: 40px
+        position: relative
+        width: 100%
+        max-width: 705px
+        min-height: 534px
+        padding: var(--pading)
+        background: #FFFFFF
+        border-radius: 60px
+        &.blue_block
+            --pading: 80px
+            padding: var(--pading)
+            background: $color-blue
+            p
+                color: #fff
+                font-weight: 700
+            .btn_block
+                position: absolute
+                bottom: var(--pading)
+                left: var(--pading)
+                right: var(--pading)
+                width: calc( 100% / (var(--pading) * 2 ))
+                a
+                    margin-left: 0
+                    font-size: 15px
+                    &:hover
+                        transition: 0.3s ease-out
+                        .color
+                            fill: $color-blue
+                        .color-blue
+                            fill: white
+                svg
+                    margin-right: 10px
+                    transition: 0.3s ease-out
+                    .color
+                        fill: white
+                    .color-blue
+                        fill: $color-blue
+
+        .title
+            margin-bottom: 10px
+            p
+                font-size: 26px
+                font-weight: 700
+                text-align: center
+        .price
+            margin-bottom: 10px
+            span
+                display: block
+                font-weight: 700
+                font-size: 40px
+                line-height: 130%
+                text-align: center
+        .btn_block
+            position: absolute
+            bottom: var(--pading)
+            left: var(--pading)
+            right: var(--pading)
+            width: calc( 100% / (var(--pading) * 2 ))
+
++max-screen($breakpoint-1500)
+    .become_sponsor
+        .sponsors_block
+            min-height: 484px
+            .price
+                margin-bottom: 10px
+                span
+                    font-size: 32px
+                    line-height: 130%
++max-screen(1025px)
+    .become_sponsor
+        .become_sponsor_wrapper
+            margin-top: 40px
+        .sponsors_block
+            --pading: 30px
+            &.blue_block
+                --pading: 60px
+                padding: var(--pading)
+                background: $color-blue
++max-screen($breakpoint-lg)
+    .become_sponsor
+        .sponsors_block
+            min-height: 534px
++max-screen($breakpoint-md)
+    .become_sponsor
+        .become_sponsor_wrapper
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+            max-width: 80%
+            margin: 40px auto 0
+        .sponsors_block.blue_block
+            .btn_block
+                a
+                    margin-left: auto
++max-screen($breakpoint-sm)
+    .become_sponsor
+        .become_sponsor_wrapper
+            max-width: 100%
+        .sponsors_block
+            height: auto
+            &.blue_block
+                --pading: 30px
+                p
+                    font-size: 16px
+            .content
+                margin-bottom: 54px
+            .title
+                p
+                    font-size: 16px
+                    font-weight: 700
+                    text-align: center
+            .price
+                margin-bottom: 5px
+                span
+                    font-size: 22px
+                    line-height: 130%

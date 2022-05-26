@@ -4,6 +4,8 @@
     overflow: hidden
     padding-top: 0
     padding-bottom: 0
+    &.down_content
+
     .section-bg
         background-color: $color-blue
 
@@ -22,6 +24,7 @@
     .bottom_wrapper
         margin-top: 80px
         display: flex
+        flex-direction: column
         justify-content: space-between
 
     .socials_block
@@ -73,6 +76,53 @@
         right: 20px
         bottom: 80px
         z-index: 3
+    .button--secondary
+        border: 1px solid #fff
+    .bottom_row
+        display: flex
+        justify-content: space-between
+        width: 100%
+    .date
+        width: max-content
+        max-width: 250px
+    .adres
+        width: 100%
+        max-width: 236px
+        position: relative
+        padding-left: 34px
+        &::before
+            position: absolute
+            content: ''
+            width: 24px
+            height: 24px
+            left: 0
+            top: 6px
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url('/assets/images/adres_icon.svg')
+        a
+            font-style: normal
+            font-weight: 500
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            color: #FFFFFF
+            &:hover
+                opacity: 0.6
+                transition: 0.3s ease-out
+
+    .content
+        margin-top: 20px
+    .btn_block
+        display: flex
+        margin-top: 40px
+        justify-content: flex-start
+        a
+            margin-right: 20px
+            &:last-of-type
+                margin-right: 0
 +max-screen($breakpoint-1920)
     .inner_first_section
         .img_block
@@ -127,6 +177,9 @@
     .inner_first_section
         display: flex
         position: relative
+        &.down_content
+            .img_block
+                height: 75vw
         .container
             position: absolute
             top: 0
@@ -142,7 +195,7 @@
             margin-right: 0
             right: auto
             max-width: 100vw
-            height: 500px
+            height: 50vw
             border-bottom-right-radius: 0
             &::after
                 position: absolute
@@ -209,7 +262,32 @@
 
 +max-screen($breakpoint-sm)
     .inner_first_section
+        &.down_content
+            .title_wrapper
+                .title
+                    h1
+                        text-align: left
 
         .right_work_img
             width: 44px
             bottom: 40px
+        .bottom_row
+            flex-wrap: wrap
+        .adres
+            max-width: none
+            padding-left: 24px
+            &::before
+                position: absolute
+                content: ''
+                width: 18px
+                height: 18px
+                left: 0
+                top: 6px
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                background-image: url('/assets/images/adres_icon.svg')
+        .date
+            max-width: none
+            width: 100%
+            margin-bottom: 20px
