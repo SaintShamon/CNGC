@@ -57,7 +57,7 @@
                             <div class="title_event">
                                 <p><?php the_title(); ?></p>
                             </div>
-                            <a href="#"></a>
+                            <a href="<?php the_permalink(  ) ?>"></a>
                         </div>
                     <?php endwhile; wp_reset_postdata(  ); ?>
                 </div>
