@@ -42,6 +42,14 @@ function sponsors_slider() {
                         slidesToShow: 1,
                         // centerMode: true,
                     }
+                },
+                {
+                    breakpoint: 376,
+                    settings: {
+                        slidesToShow: 1,
+                        // centerMode: true,
+                        dots: true,
+                    }
                 }
             ]
         });

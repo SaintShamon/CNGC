@@ -191,13 +191,7 @@
         .socials_block
             margin-top: 40px
             align-self: flex-start
-+max-screen(768px)
-    .first_section
-        .text_block
-            margin: 0 auto
-            .title
-                width: 100%
-                text-align: center
+
 +max-screen($breakpoint-md)
     .first_section
         flex-direction: column
@@ -218,6 +212,11 @@
                 display: none
         .text_block
             padding-top: 65px
+            margin: 0 auto
+            .title
+                width: 100%
+                h1
+                    text-align: left
         .arrow_block
             position: absolute
             top: -100px
@@ -245,10 +244,11 @@
             margin-right: auto
         .subtitle
             p
-                text-align: center
+                text-align: left
         .block_wrapper
             a
                 margin-left: auto
                 margin-right: auto
+                width: 100%
 
 +max-screen($breakpoint-sm)
