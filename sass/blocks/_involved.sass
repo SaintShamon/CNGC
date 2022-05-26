@@ -53,7 +53,6 @@
             padding: 0
             background: none
             img
-                object-fit: cover
                 height: 100%
     .text
         margin-top: 20px
@@ -101,6 +100,10 @@
     .involved
         .service_block
             max-width: 287px
+            &.img_block
+                img
+                    object-fit: cover
+
 +max-screen(700px)
     .involved
         .service_block
