@@ -82,13 +82,13 @@
             </div>
         <?php endif; ?>
         <?php 
-            $top_award_image = get_sub_field('top_award_image');
-            $bottom_award_image = get_sub_field('bottom_award_image')
+            $top_award_image = get_field('top_award_image', 'options');
+            $bottom_award_image = get_field('bottom_award_image', 'options');
         ?>
         <?php if($top_award_image || bottom_award_image): ?>
             <div class="right_work_img">
-                <?php if($top_award_image): ?><img src="<?php echo $top_award_image['url'] ?>" alt=""><?php endif; ?>
-                <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image['url'] ?>" alt=""><?php endif; ?>
+                <?php if($top_award_image): ?><img src="<?php echo $top_award_image ?>" alt=""><?php endif; ?>
+                <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image ?>" alt=""><?php endif; ?>
             </div>
         <?php endif; ?>
     </div>
