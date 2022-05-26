@@ -7,7 +7,7 @@
     $map = get_sub_field('map_iframe');
 ?>
 <?php if($has_map == false): ?>
-<section class="form_section section">
+<section class="form_section text-<?php the_sub_field('font_size'); ?> section">
     <div class="container">
         <div class="main_block">
             <div class="col">
@@ -72,3 +72,4 @@
     </div>
 </section>
 <?php endif; ?>
+
