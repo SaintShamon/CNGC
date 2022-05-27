@@ -88,7 +88,86 @@
             cursor: pointer
         label
             margin-left: 10px
+    //new styles form
+    select
+        -webkit-appearence: none
+        font-family: Archivo,sans-serif
+        background: #fff
+        border: 1px solid #084074
+        border-radius: 69px
+        font-size: 20px
+        font-weight: 400
+        padding: 17px 30px
+        height: 62px
+        color: rgba(8,64,116,.6)
+        -webkit-transition: .3s
+        transition: .3s
 
+    button, input[type=submit]
+        position: relative
+        display: inline-block
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        color: #fff
+        background-color: #084074
+        border: 1px solid #084074
+        border-radius: 69px
+        font-weight: 400
+        padding: 22px 44px
+        height: 62px
+        text-align: center
+        -webkit-transition: .3s ease-out
+        transition: .3s ease-out
+        font-size: 15px
+        line-height: 120%
+        text-transform: uppercase
+        cursor: pointer
+
+    .wpcf7-form-control-wrap.message-about
+        width: calc( 50% - 15px )
+        & select,
+        .nf-form-content .submit-wrap input[type=submit]
+            width: 100%
+
+    .wpcf7-form-control.wpcf7-radio
+        display: flex
+        flex-direction: column
+
+        & label
+            display: flex
+            margin-left: 0
+        &.wpcf7-list-item
+            margin-left: 0
+        &.wpcf7-list-item.first
+            margin-bottom: 10px
+        &.wpcf7-list-item-label
+            margin-left: 10px
+
+    .form_section .nf-form-wrap:nth-last-child(2)
+        margin-bottom: 0
+
+    .radio_block.submit-wrap p:last-child
+        margin-bottom: -24px
+
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background-image: url(...)
+
+    .wpcf7-form-control-wrap.message-about::after
+        content: ""
+        background-image: url(../cngc/wp-content/uploads/2022/05/select_arrow.svg)
+        position: absolute
+        right: 30px
+        top: 50%
+        transform: translatey(-50%)
+        width: 14px
+        height: 7px
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+// end new styles form
 .form--newsletter
     h4
         padding-bottom: 30px
