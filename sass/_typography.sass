@@ -78,6 +78,8 @@ body
 			font-size: 26px
 			+max-screen($breakpoint-1500)
 				font-size: 20px
+			+max-screen(375px)
+				font-size: 18px
 	&--outline
 		color: transparent
 		-webkit-text-stroke: 1px $default-text-color
@@ -229,7 +231,7 @@ h6,.h6
 	h1,h2
 		//padding-bottom: 0
 		//margin-bottom: -10px
-		color: $color-black
+		color: $color-blue
 		&:nth-last-child(1)
 			margin-bottom: 0
 	h3
@@ -238,15 +240,21 @@ h6,.h6
 			margin-bottom: 0
 
 	h1,h2,h3,h4,h5
-		color: $color-black
+		color: 	$color-blue
 		.text-color-white &
 			color: #fff
 	p,ul,ol
-		font-size: 18px
+		font-size: 20px
 		line-height: 1.6
 		color: $default-text-color
+		margin-bottom: 20px
+		+max-screen($breakpoint-1500)
+			font-size: 16px
+		+max-screen($breakpoint-md)
+			margin-bottom: 15px
 		.text-color-white &
 			color: #fff
+
 	a
 		&:not(.button)
 			text-decoration: underline
@@ -283,17 +291,17 @@ h6,.h6
 				margin-bottom: 0
 			&:before
 				content: ''
-				background-color: $color-black
-				width: 8px
-				height: 8px
-				min-width: 8px
+				background-color: $color-blue
+				width: 4px
+				height: 4px
+				min-width: 4px
 				border-radius: 50%
 				margin-bottom: 0.12em
 				margin-right: 18px
 				font-weight: 700
 				position: absolute
 				right: 100%
-				top: 10px
+				top: 14px
 			ol
 				padding: 10px
 				padding-left: rem(30px)
@@ -376,7 +384,7 @@ h6,.h6
 			font-size: 100px
 			line-height: 85px
 			font-weight: 600
-			color: $color-primary
+			color: $color-blue
 			//background-image: url(../assets/images/icon-quote.svg)
 			//background-repeat: no-repeat
 			//background-size: contain
