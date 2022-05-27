@@ -1,0 +1,50 @@
+//officer block
+.officers
+    .content_wrapper
+        margin-top: 60px
+    .officers_list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+    .officer_block
+        width: 100%
+        max-width: 460px
+        padding: 40px
+        background: #FFFFFF
+        border-radius: 60px
+        margin: 0 auto
+        p
+            font-size: 26px
+            +max-screen($breakpoint-1500)
+                font-size: 20px
+            +max-screen(375px)
+                font-size: 18px
+    .name ~ .job_title
+        margin-top: 20px
+    .name
+        p
+            font-weight: bold
++max-screen(1025px)
+    .officers
+        .content_wrapper
+            margin-top: 60px
+        .officers_list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
++max-screen($breakpoint-md)
+    .officers
+        .content_wrapper
+            margin-top: 40px
+        .officer_block
+            padding: 30px
+        .name ~ .job_title
+            margin-top: 10px
++max-screen($breakpoint-sm)
+    .officers
+        .officers_list
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+        .officer_block
+            text-align: center
