@@ -1,0 +1,52 @@
+// two_col_text_section
+
+.two_col_text
+
+    .content_wrapper
+        margin-top: 60px
+        margin-bottom: 60px
+        display: flex
+        justify-content: space-between
+    .col
+        width: 100%
+        max-width: 685px
+
++max-screen($breakpoint-1920)
+    .two_col_text
+        .col
+            width: 100%
+            max-width: 650px
++max-screen($breakpoint-xxl)
+
++max-screen($breakpoint-1500)
+    .two_col_text
+        .col
+            width: 100%
+            max-width: 48%
+        .content_wrapper
+            margin-top: 40px
+            margin-bottom: 40px
++max-screen($breakpoint-xl)
+
++max-screen($breakpoint-1200)
+
++max-screen(1100px)
+
++max-screen(1025px)
+
++max-screen($breakpoint-lg)
+
++max-screen(768px)
+    .two_col_text
+        margin-bottom: 0
+        padding-bottom: 0
+        .content_wrapper
+            display: block
+        .col
+            width: 100%
+            max-width: none
+            margin-bottom: 10px
+
++max-screen($breakpoint-md)
+
++max-screen($breakpoint-sm)

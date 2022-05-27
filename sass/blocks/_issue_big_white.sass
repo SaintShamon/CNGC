@@ -1,0 +1,27 @@
+//big white block
+.issue_big_white
+    .main_block
+        --padding: 80px
+        background: #FFFFFF
+        border-radius: 60px
+        padding: var(--padding)
+    ul
+        padding: 0
+
++max-screen(1025px)
+    .issue_big_white
+        .main_block
+            --padding: 60px
+            max-width: 640px
+            margin: 0 auto
+
++max-screen($breakpoint-md)
+
++max-screen($breakpoint-sm)
+    .issue_big_white
+        .main_block
+            --padding: 40px
++max-screen(375px)
+    .issue_big_white
+        .main_block
+            --padding: 30px
