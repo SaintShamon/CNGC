@@ -44,24 +44,25 @@
 +max-screen(768px)
     .alone
         margin-bottom: 0
-        padding-bottom: 0
+        padding-bottom: 65зч
         .content_wrapper
             display: block
+            margin-bottom: 100px
         .col
             width: 100%
             max-width: none
             margin-bottom: 10px
         .image_center_block
-            width: 100vw
-            height: 100%
-            position: relative
-            top: auto
-            left: 50%
-            margin-left: calc(-1 * (100vw / 2))
-            background-position: center
+            width: calc(100% - 60px)
+            height: max-content
+            position: absolute
+            bottom: -30px
+            left: 30px
+            background-position: 50%
             background-size: cover
             background-repeat: no-repeat
-            overflow: inherit
+            overflow: hidden
+            border-radius: 30px
 
 +max-screen($breakpoint-md)
 
