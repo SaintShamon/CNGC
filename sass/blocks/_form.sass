@@ -11,6 +11,7 @@
         width: 100%
 
     .col:first-of-type
+        position: relative
         max-width: 422px
 
     .col:last-of-type
@@ -22,7 +23,8 @@
             font-size: 26px
             line-height: 140%
     .content_block
-        margin-top: 167px
+        position: absolute
+        bottom: 0
         span
             opacity: 0.6
         .adres
@@ -104,7 +106,8 @@
                 font-size: 20px
         .content_block
             margin-top: 40px
-
+            position: relative
+            bottom: auto
 +max-screen($breakpoint-lg)
 
 +max-screen($breakpoint-md)
