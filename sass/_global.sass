@@ -102,3 +102,71 @@ iframe
 			width: 100%
 			h1,.h1,h2,.h2
 				text-align: center
+
+.pagination_block
+	margin: 120px 0 0
+	+max-screen($breakpoint-1500)
+		margin: 80px 0 0
+	+max-screen($breakpoint-sm)
+		margin: 60px 0 0
+	.next,
+	.prev
+		display: flex
+		min-width: 40px
+		min-height: 40px
+		border-radius: 50%
+		align-self: center
+		padding-top: 0
+		svg
+			width: 7px
+			height: 14px
+			align-self: center
+			margin: 0 auto
+		&:hover
+			path
+				fill: #fff
+				transition: 0.3s ease-out
+	.next
+		margin-left: 20px
+		+max-screen(425px)
+			margin-left: 10px
+	.prev
+		margin-right: 40px
+		+max-screen(425px)
+			margin-right: 20px
+		svg
+			transform: rotate(-180deg)
+	nav
+		width: 100%
+		// max-width: 210px
+		margin: 0 auto
+
+	.nav-links
+		display: flex
+		justify-content: center
+
+	a,
+	span
+		width: 40px
+		height: 40px
+		border: 1px solid rgba(8, 64, 116, 0.3)
+		border-radius: 50%
+		font-weight: 400
+		font-size: 16px
+		line-height: 140%
+		color: $color-blue
+		text-align: center
+		text-decoration: none
+		margin-right: 20px
+		padding-top: 8px
+		transition: 0.3s ease-out
+		&:hover,
+		&:active
+			background-color: $color-blue
+			color: #fff
+			transition: 0.3s ease-out
+		+max-screen(425px)
+			margin-right: 10px
+	span.current
+		background-color: $color-blue
+		color: #fff

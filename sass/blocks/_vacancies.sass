@@ -1,0 +1,200 @@
+//vacancies block
+.vacancies
+    .content_wrapper
+        margin-top: 60px
+    .vacancies_list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 30px
+    .vacancy_block
+        position: relative
+        width: 100%
+        max-width: 705px
+        min-height: 327px
+        background: #FFFFFF
+        border-radius: 60px
+        padding: 40px
+    .top_row
+        margin-top: 2.5px
+        display: flex
+        justify-content: space-between
+        margin-bottom: 17.5px
+    .adres
+        display: flex
+        width: 100%
+        max-width: 140px
+        svg
+            align-self: center
+            margin-right: 10px
+            min-width: 24px
+        span
+            align-self: center
+            font-style: normal
+            font-weight: 500
+            font-size: 13px
+            line-height: 120%
+            letter-spacing: 0.08em
+            text-transform: uppercase
+    .tags
+        width: 100%
+        max-width: 470px
+
+        ul
+            padding: 0
+            margin: 0
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-end
+        li
+            display: block
+            width: max-content
+            padding: 10px 12px
+            background: rgba(8, 64, 116, 0.6)
+            border-radius: 60px
+            font-weight: 500
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            color: #FFFFFF
+            margin-right: 5px
+            margin-bottom: 5px
+            &:last-of-type
+                margin-right: 0
+    .center_row
+        margin-bottom: 50px
+        p
+            font-size: 26px
+            +max-screen($breakpoint-1500)
+                font-size: 20px
+            +max-screen(375px)
+                font-size: 18px
+        .name ~ .price
+            margin-top: 10px
+        .name
+            p
+                font-weight: bold
+    .btn_row
+        position: absolute
+        left: 40px
+        bottom: 40px
+        width: calc( 100% - 80px )
+        a.button
+            margin-left: 0
+            padding: 22px 44px
+            width: 270px
+            svg
+                margin-left: 10px
+                transition: 0.3s ease-out
+            &:hover
+                path
+                    fill: #fff
+                    transition: 0.3s ease-out
++max-screen($breakpoint-xxl)
+    .vacancies
+        .tags
+            li
+
+                font-size: 14px
+
++max-screen($breakpoint-1500)
+    .vacancies
+        .vacancy_block
+            min-height: 300px
+        .adres
+            span
+                font-size: 11px
+        .tags
+            li
+                font-size: 12px
++max-screen($breakpoint-xl)
+    .vacancies
+        .vacancy_block
+            min-height: 280px
+        .adres
+            span
+                font-size: 11px
+            svg
+                min-width: 18px
+                width: 18px
+        .tags
+            li
+                font-size: 11px
+                padding: 6px 8px
+        .btn_row
+            a.button
+                margin-left: 0
+                padding: 18px 34px
+                width: 240px
+
++max-screen($breakpoint-1200)
+    .vacancies
+        .adres
+            max-width: 25%
+        .tags
+            width: 100%
+            max-width: 61%
+            position: absolute
+            right: 40px
+
++max-screen(1100px)
+    .vacancies
+        .vacancy_block
+            padding: 30px
+        .top_row
+            margin-bottom: 30px
+        .tags
+            right: 30px
+        .btn_row
+            width: calc( 100% - 60px )
+            left: 30px
+            bottom: 30px
++max-screen(1025px)
+
++max-screen($breakpoint-lg)
+    .vacancies
+        .vacancies_list
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+        .vacancy_block
+            padding: 30px
+            margin: 0 auto
+        .top_row
+            margin-bottom: 30px
+        .tags
+            right: 30px
++max-screen($breakpoint-md)
+
++max-screen($breakpoint-sm)
+    .vacancies
+        .tags
+            order: 1
+            position: relative
+            right: auto
+            max-width: 100%
+            ul
+                justify-content: center
+        .adres
+            order: 2
+            margin: 10px auto 0
+            max-width: max-content
+        .top_row
+            flex-direction: column
+            margin-bottom: 10px
+        .vacancy_block
+            min-height: 307px
+        .center_row
+            p
+                text-align: center
+        .btn_row
+            a.button
+                margin-left: auto
++max-screen(400px)
+    .vacancies
+        .vacancy_block
+            min-height: 325px
+        .center_row
+            margin-bottom: 70px
+            .name~.price
+                margin-top: 5px

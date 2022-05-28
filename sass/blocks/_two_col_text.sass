@@ -10,6 +10,13 @@
     .col
         width: 100%
         max-width: 685px
+    .text--size
+        &--26
+            font-size: 26px
+            +max-screen($breakpoint-1500)
+                font-size: 20px
+            +max-screen(375px)
+                font-size: 18px
 
 +max-screen($breakpoint-1920)
     .two_col_text
