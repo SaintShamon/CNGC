@@ -1,0 +1,119 @@
+// all news section
+
+.all_news
+    --news-padding: 40px
+    .content_wrapper
+        margin-top: 60px
+    .custom-select
+        max-width: 311px
+    .btn_block
+        display: flex
+        justify-content: space-between
+        p
+            align-self: center
+            margin-right: 40px
+    .news_list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+    .news_block
+        position: relative
+        padding: var(--news-padding)
+        height: auto
+        min-height: 334px
+        width: 100%
+        max-width: 460px
+        background: #FFFFFF
+        border-radius: 60px
+        overflow: hidden
+    .img_block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        max-height: 246px
+        img
+            border-radius: 60px
+    .img_block ~ .inner_block
+        margin-top: calc( 266px - var(--news-padding) )
+        .title_block
+            height: 108px
+            margin-bottom: 20px
+    .date_block
+        margin-bottom: 20px
+        span
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 140%
+    .title_block
+        height: 80px
+        margin-bottom: 40px
+        position: relative
+        display: inline-block
+        word-wrap: break-word
+        overflow: hidden
+
+        h3
+            font-family: $font-family-base
+            font-style: normal
+            font-weight: 700
+            font-size: 26px
+            line-height: 140%
+
+    .except_block
+        height: 88px
+        overflow: hidden
++max-screen($breakpoint-1500)
+    .all_news
+        .img_block ~ .inner_block
+            margin-top: calc( 236px - var(--news-padding) )
+            .title_block
+                height: 80px
+        .title_block
+            height: 60px
+            h3
+                font-size: 20px
++max-screen($breakpoint-1200)
+    .all_news
+        .news_list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+        .img_block ~ .inner_block
+            margin-top: calc( 266px - var(--news-padding) )
+        .news_block
+            margin: 0 auto
++max-screen($breakpoint-lg)
+    .all_news
+        .img_block ~ .inner_block
+            margin-top: calc( 246px - var(--news-padding) )
++max-screen(900px)
+    .all_news
+    --news-padding: 30px
++max-screen(850px)
+    .all_news
+        .img_block ~ .inner_block
+            margin-top: calc( 216px - var(--news-padding) )
++max-screen($breakpoint-md)
+    .all_news
+        .img_block ~ .inner_block
+            margin-top: calc( 196px - var(--news-padding) )
++max-screen(700px)
+    .all_news
+        .news_list
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+        .img_block ~ .inner_block
+            margin-top: calc( 256px - var(--news-padding) )
++max-screen(485px)
+    .all_news
+        .btn_block
+            flex-direction: column
+            p
+                margin-right: auto
+                margin-left: auto
+                margin-bottom: 20px
+        .img_block ~ .inner_block
+            margin-top: calc( 100vw / 2.4 )

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {
     lazy
 } from './lazy';
+
 import {
     lottie
 } from './lottie';
@@ -10,6 +11,7 @@ import {
 import {
     header
 } from './template-parts/header/header';
+
 import {
     footer
 } from './template-parts/footer/footer';
@@ -34,11 +36,17 @@ import {
     sponsors_slider
 } from './template-parts/parts/sponsors-section';
 
+import {
+    news_text
+} from './template-parts/parts/news_img_section';
 
-// import {
-//     form_section
-// } from './template-parts/parts/form-section';
+import {
+    form_select
+} from './template-parts/parts/form-section';
 
+import {
+    news_block
+} from './template-parts/parts/all_news';
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -87,5 +95,6 @@ first_slider();
 programs_slider();
 reviews_slider();
 sponsors_slider();
-
-// form_section()
+news_text();
+form_select();
+news_block();
