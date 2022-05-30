@@ -1,0 +1,165 @@
+// article_section
+.article_section
+    &.section
+        margin-top: 60px
+        padding-top: 0
+    .breadcrumbs_block
+        margin-bottom: 120px
+        a
+            position: relative
+            padding-left: 44px
+            font-family: 'Archivo'
+            font-style: normal
+            font-weight: 500
+            font-size: 15px
+            line-height: 120%
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            &:hover
+                opacity: 0.6
+            &::before
+                position: absolute
+                content: ''
+                left: 0
+                top: calc( 50% - 10px )
+                width: 10px
+                height: 20px
+                background-image: url(../assets/images/news/news_arrow.svg)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+    .content_wrapper
+        display: flex
+        justify-content: space-between
+    .main_content
+        width: 100%
+        max-width: 900px
+    .sidebar_block
+        width: 100%
+        max-width: 460px
+    .latest_post
+        --news-padding: 40px
+        .news_block
+            position: relative
+            padding: var(--news-padding)
+            height: auto
+            min-height: 334px
+            width: 100%
+            background: #FFFFFF
+            border-radius: 60px
+            overflow: hidden
+            margin-bottom: 30px
+            &:last-of-type
+                margin-bottom: 0
+        .img_block
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            max-height: 246px
+        img
+            border-radius: 60px
+        .img_block ~ .inner_block
+            margin-top: calc( 266px - var(--news-padding) )
+            .title_block
+                height: 110px
+                margin-bottom: 20px
+        .date_block
+            margin-bottom: 20px
+            span
+                font-style: normal
+                font-weight: 400
+                font-size: 16px
+                line-height: 140%
+        .title_block
+            position: relative
+            display: inline-block
+            word-wrap: break-word
+            overflow: hidden
+            h3
+                font-size: 26px
+        .except_block
+            height: 88px
+            overflow: hidden
+
++max-screen($breakpoint-xxl)
+    .article_section
+        .main_content
+            width: 100%
+            max-width: 800px
+        .sidebar_block
+            width: 100%
+            max-width: 420px
+        .latest_post
+            --news-padding: 40px
++max-screen($breakpoint-1500)
+    .article_section
+        .main_content
+            width: 100%
+            max-width: 700px
+        .latest_post
+            .img_block ~ .inner_block
+                margin-top: calc( 236px - var(--news-padding) )
+            .title_block
+                height: 80px
+                h3
+                    font-size: 20px
++max-screen($breakpoint-xl)
+
++max-screen($breakpoint-1200)
+    .article_section
+        .breadcrumbs_block
+            margin-bottom: 60px
+        .content_wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+        .main_content
+            width: 100%
+            max-width: none
+            margin: 0 auto
+        .sidebar_block
+            max-width: none
+            margin: 60px auto 0
+
+        .latest_post
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 30px
+            .news_block
+                margin-bottom: 0
+                &:last-of-type
+                    margin-bottom: 0
+            .img_block ~ .inner_block
+                margin-top: calc( 33vw / 2.45 )
+                .title_block
+                    height: 80px
+            .title_block
+                h3
+                    font-size: 20px
++max-screen(1100px)
+
++max-screen(1025px)
+
++max-screen($breakpoint-lg)
+    .article_section
+        .latest_post
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+            .news_block
+                width: 100%
+                max-width: 460px
+                margin: 0 auto
+            .img_block ~ .inner_block
+                margin-top: calc( 256px - var(--news-padding) )
+
++max-screen($breakpoint-md)
+
++max-screen($breakpoint-sm)
+    .article_section
+        .latest_post
+            .img_block ~ .inner_block
+                margin-top: calc( 100vw / 2.4 )
+            .title_block h3
+                font-size: 16px

@@ -6,6 +6,13 @@
     padding-bottom: 0
     &.down_content
 
+    &.article_first_section
+        h1
+            font-family: $font-family-base
+            font-style: normal
+            font-weight: 700
+            font-size: 40px
+            line-height: 140%
     .section-bg
         background-color: $color-blue
 
@@ -165,6 +172,9 @@
                 left: 0
 +max-screen($breakpoint-1200)
     .inner_first_section
+        &.article_first_section
+            h1
+                font-size: 30px
         .text_block
             max-width: 430px
 
@@ -267,7 +277,10 @@
                 .title
                     h1
                         text-align: left
-
+        &.article_first_section
+            h1
+                font-size: 20px
+                text-align: left
         .right_work_img
             width: 44px
             bottom: 40px

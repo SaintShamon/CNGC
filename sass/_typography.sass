@@ -403,21 +403,33 @@ h6,.h6
 	pre
 		white-space: pre-wrap
 	blockquote
-		margin: rem(24px 0)
+		margin-top: 60px
 		position: relative
-		padding-left: rem(75px)
-		padding-top: rem(20px)
+		padding: 204px 80px 80px
+		border: 1px solid rgba(8, 64, 116, 0.3)
+		border-radius: 60px
+		font-style: normal
+		font-weight: 700
+		font-size: 26px
+
 		+max-screen($breakpoint-sm)
-			padding-left: rem(30px)
-			padding-right: rem(30px)
+			// padding-left: rem(30px)
+			// padding-right: rem(30px)
 			padding-top: rem(5px)
 		p
-			font-size: rem(30px)
-			line-height: rem(42px)
+			position: absolute
+			width: calc( 100% - 160px )
+			top: 80px
+			left: 80px
+			margin-bottom: 0
 			font-weight: 400
+			&:last-of-type
+				top: 110px
+				left: 80px
+				opacity: 0.6
 			+max-screen($breakpoint-md)
-				font-size: rem(24px)
-				line-height: 1.25em
+				// font-size: rem(24px)
+				// line-height: 1.25em
 		a
 			font-size: 14px
 			line-height: 19px
@@ -426,24 +438,33 @@ h6,.h6
 		+max-screen($breakpoint-md)
 
 		&:before
-			content: '"'
-			position: absolute
-			top: 0
-			left: 0
-			width: rem(55px)
-			height: rem(55px)
-			font-size: 100px
-			line-height: 85px
-			font-weight: 600
-			color: $color-blue
-			//background-image: url(../assets/images/icon-quote.svg)
-			//background-repeat: no-repeat
-			//background-size: contain
-			//background-position: center
+			content: ''
+			position: relative
+			width: 80px
+			height: 64px
+			margin-right: 40px
+			margin-bottom: 80px
+			float: left
+			background-image: url(../assets/images/news/news_blockquote.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
 			+max-screen($breakpoint-sm)
 				width: rem(30px)
 				height: rem(30px)
 				left: -10px
+		+max-screen($breakpoint-1500)
+			padding: 164px 60px 60px
+			font-size: 20px
+			p
+				position: absolute
+				width: calc( 100% - 120px )
+				top: 60px
+				left: 60px
+
+				&:last-of-type
+					top: 90px
+					left: 60px
 	.wpcf7
 		padding: rem(12px 0)
 		&:nth-last-child(1)

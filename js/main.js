@@ -47,6 +47,9 @@ import {
 import {
     news_block
 } from './template-parts/parts/all_news';
+import {
+    article_block
+} from './template-parts/parts/article_section';
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -98,3 +101,4 @@ sponsors_slider();
 news_text();
 form_select();
 news_block();
+article_block();

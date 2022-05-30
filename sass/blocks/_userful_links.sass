@@ -1,0 +1,114 @@
+//userful_links
+.userful_links
+    .title_wrapper:after
+        display: none
+    .links_row
+        display: flex
+        margin-top: 80px
+    .links_col
+        position: relative
+        width: 25%
+        &::after
+            position: absolute
+            content: ""
+            height: 248px
+            width: 1px
+            bottom: -20px
+            right: 0
+            background-color: #084074
+        &:last-of-type
+            &::after
+                display: none
+        h3
+            font-family: $font-family-base
+            font-style: normal
+            font-weight: 700
+            font-size: 22px
+            line-height: 120%
+            text-align: center
+            text-transform: uppercase
+        a
+            margin-top: 40px
+            margin-bottom: 40px
++max-screen($breakpoint-1500)
+    .userful_links
+        .links_row
+            display: flex
+            margin-top: 60px
+        .links_col
+            &::after
+                position: absolute
+                content: ""
+                height: 228px
+                width: 1px
+                bottom: -20px
+                right: 0
+                background-color: #084074
+            h3
+                font-size: 20px
+            a
+                margin-top: 30px
+                margin-bottom: 30px
++max-screen(1025px)
+    .userful_links
+        .links_row
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+            margin-top: 60px
+        .links_col
+            width: 100%
+            &::after
+                position: absolute
+                content: ""
+                height: 100%
+                width: 1px
+                bottom: 0
+                right: -15px
+                background-color: #084074
+            &::before
+                position: absolute
+                content: ""
+                height: 1px
+                width: 80%
+                bottom: 0
+                right: 10%
+                background-color: #084074
+            &:nth-of-type(1)
+                &::after
+                    bottom: 30px
+            &:nth-of-type(2)
+                &::after
+                    display: none
+            &:nth-of-type(3),
+            &:nth-of-type(4)
+
+                &::before
+                    display: none
++max-screen($breakpoint-sm)
+    .userful_links
+        .links_row
+            margin-top: 40px
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+
+        .links_col
+            &:nth-of-type(1)
+                &::after
+                    display: none
+            &:nth-of-type(2)
+                &::after
+                    display: none
+            &:nth-of-type(3)
+                &::after
+                    display: none
+                &::before
+                    display: block
+            &:nth-of-type(4)
+                &::before
+                    display: none
+            h3
+                font-size: 16px
+            a
+                margin-top: 30px
+                margin-bottom: 30px
