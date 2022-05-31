@@ -413,8 +413,6 @@ h6,.h6
 		font-size: 26px
 
 		+max-screen($breakpoint-sm)
-			// padding-left: rem(30px)
-			// padding-right: rem(30px)
 			padding-top: rem(5px)
 		p
 			position: absolute
@@ -450,9 +448,11 @@ h6,.h6
 			background-size: contain
 			background-position: center
 			+max-screen($breakpoint-sm)
-				width: rem(30px)
-				height: rem(30px)
-				left: -10px
+				width: 40px
+				height: 24px
+				margin-right: 10px
+				margin-bottom: 20px
+				order: 3
 		+max-screen($breakpoint-1500)
 			padding: 164px 60px 60px
 			font-size: 20px
@@ -465,6 +465,21 @@ h6,.h6
 				&:last-of-type
 					top: 90px
 					left: 60px
+		+max-screen($breakpoint-sm)
+			margin-top: 30px
+			padding: 40px
+			p
+				position: relative
+				width: 100%
+				top: auto
+				left: auto
+				order: 1
+
+				&:last-of-type
+					top: auto
+					left: auto
+					order: 2
+					margin-bottom: 20px
 	.wpcf7
 		padding: rem(12px 0)
 		&:nth-last-child(1)
