@@ -12,7 +12,7 @@
 
     .col:first-of-type
         position: relative
-        max-width: 422px
+        max-width: 442px
 
     .col:last-of-type
         max-width: 652px
@@ -49,7 +49,26 @@
             margin-bottom: 20px
         .btn
             margin-top: 44px
-
+    .form_field
+        width: 100%
+        max-width: 311px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    .submit-wrap
+        width: 100%
+        input[type=submit].response_btn
+            display: block
+            width: 100%
+            max-width: 311px
+            margin-left: auto
+            margin-right: auto
+    label
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 140%
+        margin-bottom: 10px
 +max-screen($breakpoint-1920)
 
 +max-screen($breakpoint-xxl)
@@ -80,6 +99,23 @@
                 margin-bottom: 20px
             .btn
                 margin-top: 44px
+        .form_field
+            width: 100%
+            max-width: 260px
+        .custom-select .select-selected
+            width: 100%
+            font-size: 16px
+            padding: 14px 30px
+        label
+            font-size: 16px
+        .submit-wrap
+            width: 100%
+            input[type=submit].response_btn
+                display: block
+                width: 100%
+                max-width: 260px
+                height: 52px
+                padding: 16px 40px
 +max-screen($breakpoint-1200)
     .form_section
         .col:first-of-type
@@ -141,6 +177,10 @@
                 input[type=submit]
                     width: 100%
                     max-width: none
+        .form_field
+            width: 100%
+            max-width: none
+            margin: 0 auto 10px
 +max-screen($breakpoint-sm)
     .form_section
         .main_block
@@ -148,4 +188,6 @@
         .title,
         .subtitle,
         .content_block
+            text-align: center
+        label
             text-align: center

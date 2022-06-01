@@ -1,0 +1,61 @@
+// col_text_col_white
+.col_text_col_white
+    .content_wrapper
+        margin-top: 60px
+        display: flex
+        justify-content: space-between
+    .col
+        width: 100%
+        &.content-block
+            max-width: 585px
+
+        &.white_block
+            max-width: 705px
+    .content-block
+        p
+            margin-bottom: 20px
+    .white_block
+        position: relative
+        background: #FFFFFF
+        border-radius: 60px
+        padding: 80px
+        p:first-of-type
+            margin-bottom: 35px
+        p:nth-of-type(2)
+            margin-bottom: 28px
+        .btn_block
+            margin-top: 34px
+            a
+                margin-left: 0
++max-screen($breakpoint-1500)
+    .col_text_col_white
+        .white_block
+            padding: 60px
+        .content-block
+            margin-right: 30px
++max-screen($breakpoint-1200)
+    .col_text_col_white
+        .content_wrapper
+            margin-top: 40px
+        .white_block
+            padding: 40px
+            p:first-of-type
+                margin-bottom: 25px
+            p:nth-of-type(2)
+                margin-bottom: 18px
+            .btn_block
+                margin-top: 24px
+        .content-block
+            margin-right: 30px
++max-screen($breakpoint-lg)
+    .col_text_col_white
+        .content_wrapper
+            flex-direction: column
+        .col
+            width: 100%
+            margin: 0 auto
+            &.content-block
+                max-width: calc( 100% - 80px )
+
+            &.white_block
+                max-width: none
