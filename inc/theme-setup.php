@@ -20,10 +20,9 @@ function theme_setup(){
 		array( 
 			'main-menu' => __( 'Main Menu', 'arken' ),
 			'hidden-menu' => __( 'Hidden Menu', 'arken' ),
-			'footer-menu-1' => __( 'Footer Menu 1', 'arken'),
-			'footer-menu-2' => __( 'Footer Menu 2', 'arken'),
-            'footer-bottom-menu' => __( 'Footer Bottom Menu', 'arken'),  
-            'langs-menu' => __( 'Languages', 'arken'),  
+			'footer-menu-1' => __( 'Footer menu', 'arken'),
+			'footer-menu-2' => __( 'Footer menu 2', 'arken'),
+            'footer-menu-3' => __( 'Footer menu 3', 'arken'),  
 		)
     );
     
