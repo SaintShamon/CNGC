@@ -1,0 +1,114 @@
+// refferal section
+.refferal
+    .content_wrapper
+        margin-top: 60px
+    .top_row
+        margin-bottom: 40px
+    .center_row
+        background: #FFFFFF
+        border-radius: 60px
+        padding: 80px
+        display: flex
+        justify-content: space-between
+    .col_left
+        width: 100%
+        max-width: 810px
+        margin-right: 60px
+        p
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+    .down_block
+        margin-top: 64px
+        p
+            margin-bottom: 20px
+            &:last-of-type
+                margin-bottom: 0
+    .col_right
+        position: relative
+        width: 100%
+        max-width: 410px
+        p
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+        &::before
+            position: absolute
+            content: ''
+            width: 1px
+            height: 100%
+            left: -30px
+            bottom: 0
+            background: #084074
+            opacity: 0.4
+
+    .tel_block
+        position: absolute
+        bottom: 0
+        left: 0
+        p
+            font-size: 16px
+            line-height: 140%
+            margin-bottom: 0
+        p.small
+            font-weight: 500
+            font-size: 11px
+            line-height: 120%
+            letter-spacing: 0.08em
+        span
+            opacity: 0.6
++max-screen($breakpoint-xl)
+    .refferal
+        .center_row
+            padding: 60px
++max-screen($breakpoint-1200)
+    .refferal
+        .col_right
+            max-width: 310px
++max-screen(1025px)
+    .refferal
+        .col_right
+            max-width: 250px
+        .tel_block p
+            font-size: 12px
+            line-height: 140%
+            margin-bottom: 0
++max-screen($breakpoint-lg)
+    .refferal
+        .center_row
+            flex-direction: column
+        .col_left
+            margin-right: auto
+            margin-bottom: 60px
+            p
+                margin-bottom: 20px
+        .down_block
+            margin-top: 44px
+
+        .col_right
+            max-width: none
+            p
+                margin-bottom: 20px
+            &::before
+                position: absolute
+                content: ''
+                width: 100%
+                height: 1px
+                left: 0
+                top: -30px
+        .tel_block
+            position: relative
+            margin-top: 30px
+            p
+                margin-bottom: 0
++max-screen($breakpoint-sm)
+    .refferal
+        .center_row
+            flex-direction: column
+            padding: 40px
++max-screen(355px)
+    .refferal
+        .center_row
+            flex-direction: column
+            padding: 20px
+            border-radius: 20px
