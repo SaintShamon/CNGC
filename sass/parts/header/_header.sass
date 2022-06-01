@@ -158,7 +158,7 @@ header
             letter-spacing: 0.08em
             text-transform: uppercase
             color: $color-blue
-    li.has-sub-menu
+    li.menu-item-has-children
         position: relative
         &::after
             position: absolute
@@ -171,9 +171,9 @@ header
             background-size: cover
             background-repeat: no-repeat
 
-    li.has-sub-menu:hover > ul,
-    li.has-sub-menu:focus-within > ul,
-    li.has-sub-menu ul:hover
+    li.menu-item-has-children:hover > ul,
+    li.menu-item-has-children:focus-within > ul,
+    li.menu-item-has-children ul:hover
         display: block
 
 #toggle
