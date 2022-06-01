@@ -47,9 +47,14 @@ import {
 import {
     news_block
 } from './template-parts/parts/all_news';
+
 import {
     article_block
 } from './template-parts/parts/article_section';
+
+import {
+    our_programs_slider
+} from './template-parts/parts/our_programs';
 // import {
 //     videoBlock
 // } from './template-parts/blocks/video';
@@ -102,3 +107,4 @@ news_text();
 form_select();
 news_block();
 article_block();
+our_programs_slider();

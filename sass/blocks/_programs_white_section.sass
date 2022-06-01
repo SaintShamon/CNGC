@@ -1,0 +1,64 @@
+//programs_white_section
+.programs_white_section
+    .main_block
+        background: #FFFFFF
+        border-radius: 60px
+        padding: 80px 120px
+    .bottom_block
+        display: flex
+        margin-top: 40px
+        p
+            width: 100%
+            max-width: 209px
+            align-self: center
+        a
+            margin-left: 20px
+            margin-right: 0
+            font-size: 15px
+            max-height: 62px
+            align-self: center
+            padding: 19px 40px
+            &:last-of-type
+                padding: 22px 44px
+            &:hover
+                transition: 0.3s ease-out
+                .color
+                    fill: white
+                .color-blue
+                    fill: $color-blue
+        svg
+            margin-right: 10px
+            transition: 0.3s ease-out
+        .color
+            fill: $color-blue
+        .color-blue
+            fill: white
++max-screen($breakpoint-1500)
+    .programs_white_section
+        .main_block
+            padding: 40px 60px
++max-screen($breakpoint-lg)
+    .programs_white_section
+        .bottom_block
+            flex-wrap: wrap
+            a
+                margin-left: 0
+                margin-right: 20px
+                margin-bottom: 10px
++max-screen($breakpoint-md)
+    .programs_white_section
+        .bottom_block
+            flex-direction: column
+            p
+                max-width: none
+                text-align: center
+                margin-bottom: 20px
+            a
+                margin-left: auto
+                margin-right: auto
++max-screen(425px)
+    .programs_white_section
+        .main_block
+            padding: 40px
+            p
+                text-align: center

@@ -1,0 +1,182 @@
+// our_programs
+.our_programs
+    .content_wrapper
+        margin-top: 60px
+    .top_row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 40px
+        .col
+            width: 100%
+            max-width: 695px
+    .programs_list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+    .program_block
+        position: relative
+        width: 100%
+        max-width: 338px
+        height: 386px
+        background: #FFFFFF
+        border-radius: 60px
+        overflow: hidden
+        cursor: pointer
+        transition: .3s
+
+        img
+            border-radius: 60px
+
+        a.btn
+            display: none
+            width: 66px
+            height: 66px
+            border: 1px solid rgba(255, 255, 255, 0.3)
+            border-radius: 60px
+            background: none
+            position: absolute
+            z-index: 2
+            top: 164px
+            left: 40px
+            svg
+                margin: 0 auto
+                align-self: center
+                transform: rotate(-90deg)
+
+            path
+                fill: white
+                transition: .3s
+
+            &:hover
+                background: white
+                transition: .3s
+                path
+                    fill: $color-blue
+        &:hover
+            transition: .3s
+            &::after
+                position: absolute
+                content: ''
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: $color-blue
+
+            a.btn
+                display: flex
+
+            .title_block
+                position: absolute
+                z-index: 2
+                p
+                    color: #fff
+    .title_block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        min-height: 126px
+        height: auto
+        padding-right: 40px
+        padding-left: 40px
+        box-sizing: border-box
+        display: flex
+        p
+            width: 100%
+            font-weight: 700
+            font-size: 22px
+            line-height: 120%
+            align-self: center
+            text-align: center
++max-screen($breakpoint-xxl)
+    .our_programs
+        .program_block
+            height: 380px
+        .title_block
+            p
+                font-size: 20px
++max-screen($breakpoint-1500)
+    .our_programs
+        .top_row
+            .col
+                width: 100%
+                max-width: 48%
+        .program_block
+            height: 340px
+        .title_block
+            min-height: 120px
+            p
+                font-size: 16px
++max-screen($breakpoint-xl)
+    .our_programs
+        .programs_list
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 30px
+        .program_block
+            position: relative
+            width: 100%
+            max-width: 338px
+            height: 386px
+        .title_block
+            p
+                font-size: 20px
++max-screen(1100px)
+    .our_programs
+        .program_block
+            height: 360px
+        .title_block
+            min-height: 120px
+            p
+                font-size: 16px
++max-screen(1025px)
+    .our_programs
+        .program_block
+            height: auto
+        .title_block
+            position: relative
++max-screen($breakpoint-lg)
+    .our_programs
+        .program_block
+            a.btn
+                top: calc( 50% - 33px )
++max-screen($breakpoint-md)
+    .our_programs
+        .programs_list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+        .program_block
+            a.btn
+                top: calc( 50% - 0 )
++max-screen(620px)
+    .our_programs
+        .top_row
+            flex-wrap: wrap
+            .col
+                width: 100%
+                max-width: none
+                margin-bottom: 20px
+                &:last-of-type
+                    margin-bottom: 0
+        .programs_list
+            display: flex
+            flex-direction: column
+            grid-template-columns: auto
+            gap: none
+        .slick-slide
+            margin-right: 15px
+            margin-left: 15px
+        .program_block
+            max-width: none
+        .slick-prev, .slick-next
+            background-color: $color-blue
+            border-radius: 50%
+
+        .slick-prev:before,
+        .slick-next:before
+            font-size: 10px
+            font-family: $font-family-base
+        .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus
+            background-color: $color-blue
