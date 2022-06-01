@@ -4,12 +4,19 @@
     <div class="header_desctop">
         <div class="top_header_block">
             <div class="container">
+                <?php 
+                    $logo = get_field('header_logo', 'options');
+                    $first_button = get_field('header_first_button', 'options');
+                    $second_button = get_field('header_second_button', 'options');
+                ?>
                 <div class="inner_block">
-                    <div class="header_logo">
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/main_logo.svg" alt="">
-                        </a>
-                    </div>
+                    <?php if($logo): ?>
+                        <div class="header_logo">
+                            <a href="<?php echo get_home_url(  ); ?>">
+                                <img src="<?php echo $logo; ?>" alt="">
+                            </a>
+                        </div>
+                    <?php endif; ?>
                     <div class="right_top_block">
                         <div class="search">
                             <button class="btn-search">
@@ -23,10 +30,16 @@
                             </button>
                             <input type="text" class="input-search" placeholder="Search...">
                         </div>
-                        <div class="btn_block">
-                            <a href="#" class="button button--secondary">DONATE NOW</a>
-                            <a href="#" class="button">get involved</a>
-                        </div>
+                        <?php if($first_button || $second_button): ?>
+                            <div class="btn_block">
+                                <?php if($first_button): ?>
+                                    <a href="<?php echo $first_button['url']; ?>" class="button button--secondary"><?php echo $first_button['title']; ?></a>
+                                <?php endif; ?>
+                                <?php if($second_button): ?>
+                                    <a href="<?php echo $second_button['url']; ?>" class="button"><?php echo $second_button['title']; ?></a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -35,127 +48,7 @@
             <div class="container">
                 <div class="inner_block">
                     <nav class="header__nav">
-                        <ul class="menu">
-                            <li>
-                                <a href="#">about us</a>
-                            </li>
-                            <li class="has-sub-menu">
-                                <a href="#">programs</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="#">
-                                            Excluded Workers Fund
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Project Connect
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Residential Services
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Integrated Counseling & Recovery Services
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Certified Community Behavioral Health Clinic
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Starry Night Café Respite Program
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Empower Life Long Island
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Drop-In Center
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Mobile Recovery Unit
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Health Home Care Management
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Services for Serious Mental Illness – ACT Teams
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Health Insurance Navigator
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Link-Age
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Project FORWARD
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Narcan Training
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Home and Community Based Services
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Personalized Recovery-Oriented Services
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Mental Health First Aid
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Understanding the Issues</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#"> GET INVOLVED</a>
-                            </li>
-                            <li>
-                                <a href="#">news</a>
-                            </li>
-                            <li>
-                                <a href="#">Careers</a>
-                            </li>
-                            <li>
-                                <a href="#">contact</a>
-                            </li>
-                            <li>
-                                <a href="#">subscribe</a>
-                            </li>
-                        </ul>
+                        <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
                     </nav>
                     <div class="header_logo">
                         <a href="#">

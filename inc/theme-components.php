@@ -5,61 +5,39 @@
 =====================
 */
 
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-// function button($label='Button', $href='#', $target = '_self',$class=''){
-//   return '<a class="button '.$class.'" href="'.$href.'" target="'.$target.'"><span class="button__text">'.$label.'</span></a>';
-// }
-
-// function button_acf($link,$class='',$customLabel=''){
-//   if( $link ): 
-//       $link_url = $link['url'];
-//       $link_title = $link['title'];
-//       $link_target = $link['target'] ? $link['target'] : '_self';
-//       if($customLabel) $link_title = $customLabel;
-//       return '<a class="button '.$class.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'"><span class="button__text">'.esc_html( $link_title ).'</span></a>';
-//   endif;
-// }
-
-
-// function button_icon($label='Button', $href='#', $target = '_self',$class=''){
-//   return '<a class="buttonIcon '.$class.'" href="'.$href.'" target="'.$target.'"><span class="buttonIcon__inner"><span class="buttonIcon__text">'.esc_html( $label ).'</span><span class="buttonIcon__icon">'.get_inline_svg('icon-arrow.svg').'</span></span></a>';
-// }
-
-// function button_icon_acf($link,$class='',$customLabel=''){
-//   if( $link ): 
-//       $link_url = $link['url'];
-//       $link_title = $link['title'];
-//       $link_target = $link['target'] ? $link['target'] : '_self';
-//       if($customLabel) $link_title = $customLabel;
-//       return '<a class="buttonIcon '.$class.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'"><span class="buttonIcon__inner"><span class="buttonIcon__text">'.esc_html( $link_title ).'</span><span class="buttonIcon__icon">'.get_inline_svg('icon-arrow.svg').'</span></span></a>';
-//   endif;
-// }
-
-// function button_icon_bg_acf($link,$class='',$customLabel=''){
-//   if( $link ): 
-//       $link_url = $link['url'];
-//       $link_title = $link['title'];
-//       $link_target = $link['target'] ? $link['target'] : '_self';
-//       if($customLabel) $link_title = $customLabel;
-//       return '<a class="buttonIconBg '.$class.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'"><span class="buttonIconBg__inner"><span class="buttonIconBg__text">'.esc_html( $link_title ).'</span><span class="buttonIconBg__icon">'.get_inline_svg('icon-play.svg').'</span></span></a>';
-//   endif;
-// }
-
-// function button_download_acf($file,$class='',$customLabel=''){
-//   if( $file ): 
-//       $link_url = $file['url'];
-//       $link_title = __('Download PDF','arken');
-//       $link_target = '_blank';
-//       if($customLabel) $link_title = $customLabel;
-//       return '<a class="button button--download '.$class.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'"><span class="button__inner"><span class="button__icon">'.get_inline_svg('icon-download.svg').'</span><span class="button__text">'.esc_html( $link_title ).'</span></span></a>';
-//   endif;
-// }
+function wpb_track_post_views ($post_id) {
+    if ( !is_single() ) return;
+    if ( empty ( $post_id) ) {
+        global $post;
+        $post_id = $post->ID;    
+    }
+    wpb_set_post_views($post_id);
+}
+add_action( 'wp_head', 'wpb_track_post_views');
 
 
-// function icon_block_acf($icon, $label = ''){
-//   if($icon){
-//     return '<div class="icon-block"><span class="icon-block__icon"><img src="'.$icon['url'].'"></span><span class="icon-block__label">'.$label.'</span></div>';
-//   }
-// }
-
-//ACF image
+function wpb_get_post_views($postID){
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 View";
+    }
+    return $count.' Views';
+}
