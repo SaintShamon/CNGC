@@ -208,3 +208,4 @@ function cptui_register_my_cpts_vacancies() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_vacancies' );
+
