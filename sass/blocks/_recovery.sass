@@ -21,25 +21,29 @@
             border-radius: 60px
             overflow: hidden
         &:last-of-type
+            position: relative
             max-width: 657px
             margin-left: auto
     p
         margin-bottom: 40px
         &:last-of-type
             margin-bottom: 0
-
-    a
-        margin-top: 60px
-        margin-left: 0
-        font-size: 15px
-        padding: 22px 44px
+    span
+        opacity: 0.6
     .date
         margin-top: 40px
         p
             margin-bottom: 0
         span
             opacity: 0.6
-
+    .btn_block
+        margin-top: 40px
+        display: flex
+        a
+            margin-left: 0
+            margin-right: 20px
+            &:last-of-type
+                margin-right: 0
 +max-screen($breakpoint-1920)
 
 +max-screen($breakpoint-xxl)
@@ -158,9 +162,8 @@
                 order: 1
                 max-width: none
 
-        a
-            margin-left: auto
-            margin-top: 30px
+        .btn_block
+
             margin-bottom: 30px
         .title_wrapper
 
@@ -171,3 +174,14 @@
         .date
             margin-bottom: 40px
 +max-screen($breakpoint-sm)
+    .recovery
+        .btn_block
+            flex-direction: column
+            a
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 10px
+                min-width: 180px
+                &:last-of-type
+                    margin-right: auto
+                    margin-bottom: 0
