@@ -55,33 +55,10 @@ import {
 import {
     our_programs_slider
 } from './template-parts/parts/our_programs';
-// import {
-//     videoBlock
-// } from './template-parts/blocks/video';
-// import {
-//     videoBanner
-// } from './template-parts/blocks/video-banner';
-// import {
-//     testimonialsSlider
-// } from './template-parts/blocks/testimonials-slider';
-// import {
-//     accordion
-// } from './template-parts/blocks/accordion';
-// import {
-//     partners
-// } from './template-parts/blocks/partners';
-// import {
-//     process
-// } from './template-parts/blocks/process';
-// import {
-//     popup
-// } from './template-parts/blocks/popup';
-// import {
-//     blogAjax
-// } from './template-parts/blocks/blog-ajax';
-// import {
-//     textTabs
-// } from './template-parts/blocks/text_tabs';
+
+import {
+    history_slider
+} from './template-parts/parts/history-section';
 
 
 header();
@@ -99,6 +76,7 @@ lottie();
 // blogAjax();
 // textTabs();
 // scrollToAnchor();
+
 first_slider();
 programs_slider();
 reviews_slider();
@@ -108,3 +86,4 @@ form_select();
 news_block();
 article_block();
 our_programs_slider();
+history_slider();

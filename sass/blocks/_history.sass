@@ -1,0 +1,60 @@
+// history_section
+
+.history
+    padding-bottom: 145px
+    .history_block
+        display: flex !important
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        padding: 40px
+        width: 100%
+        max-width: 460px
+        height: 462px
+        background: #FFFFFF
+        border-radius: 60px
+        overflow: hidden
+        cursor: pointer
+
+        h3
+            font-size: 40px
+    .content_block
+        align-self: flex-end
+        p
+            font-size: 16px
+            line-height: 130%
+    .slick-list
+        overflow: inherit
+    .slick-slide
+        margin-right: 31px
++max-screen($breakpoint-1200)
+    .history
+        .slick-list
+            padding: 0 20% 0 0
++max-screen(1025px)
+    .history
+        .content_block
+            align-self: flex-end
+            p
+                font-size: 14px
+                line-height: 130%
++max-screen($breakpoint-lg)
+    .history
+        padding-bottom: 60px
+        .history_block
+            margin: 0 auto
+            max-width: none
++max-screen($breakpoint-sm)
+    .history
+        padding-bottom: 60px
+        .history_block
+            margin: 0 auto
+            max-width: none
+            height: auto
+            min-height: 400px
+        .slick-list
+            overflow: hidden
+            padding: 0 0 0 0
+        .slick-slide
+            margin-right: 10px
+            margin-left: 10px
