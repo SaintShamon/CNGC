@@ -1,7 +1,6 @@
 //officer block
 .officers
-    .content_wrapper
-        margin-top: 60px
+
     .officers_list
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -26,16 +25,12 @@
             font-weight: bold
 +max-screen(1025px)
     .officers
-        .content_wrapper
-            margin-top: 60px
         .officers_list
             display: grid
             grid-template-columns: repeat(2, 1fr)
             gap: 30px
 +max-screen($breakpoint-md)
     .officers
-        .content_wrapper
-            margin-top: 40px
         .officer_block
             padding: 30px
         .name ~ .job_title
