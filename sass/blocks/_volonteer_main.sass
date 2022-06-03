@@ -1,0 +1,192 @@
+// events_inner_section
+
+.volonteer_main
+    --padding: 40px
+    .content_wrapper
+        margin-top: 60px
+    .top_row
+        display: flex
+        justify-content: space-between
+        .col
+            width: 100%
+            max-width: 643px
+            &:first-of-type
+                margin-right: 30px
+            p
+                margin-bottom: 16px
+                &:last-of-type
+                    margin-bottom: 0
+            span
+                opacity: 0.6
+    .center_row
+        margin-top: 60px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+        grid-template-areas: "box_img box_img box1" "box2 box3 box4"
+    .volonteer_block
+        box-sizing: border-box
+        position: relative
+        width: 100%
+        max-width: 460px
+        height: auto
+        min-height: 527px
+        background: #FFFFFF
+        border-radius: 60px
+        padding: var(--padding)
+
+        &.box1
+            grid-area: box1
+        &.box2
+            grid-area: box2
+        &.box3
+            grid-area: box3
+        &.box4
+            grid-area: box4
+        p
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+        a
+            margin-bottom: 40px
+            margin-left: 0
+        .down_block
+            position: absolute
+            left: var(--padding)
+            bottom: var(--padding)
+            width: calc( 100% - 2 * var(--padding) )
+            a
+                text-decoration: none
+    .volonteer_block_img
+        min-height: 527px
+        grid-area: box_img
+        border-radius: 60px
+        overflow: hidden
+        background-blend-mode: soft-light,normal
+
+    .blue_box
+        background: $color-blue
+        color: #FFFFFF
+        .btn_block
+            position: absolute
+            left: var(--padding)
+            bottom: var(--padding)
+            a
+                margin-left: 0
+                margin-bottom: 0
+
++max-screen($breakpoint-1920)
+
++max-screen($breakpoint-xxl)
+    .volonteer_main
+        .volonteer_block
+            min-height: 557px
+        .volonteer_block_img
+            min-height: 557px
++max-screen($breakpoint-1500)
+    .volonteer_main
+        .volonteer_block
+            min-height: 460px
+        .volonteer_block_img
+            min-height: 460px
+
++max-screen($breakpoint-xl)
+
++max-screen($breakpoint-1200)
+    .volonteer_main
+        --padding: 30px
+        .content_wrapper
+            margin-top: 40px
+        .center_row
+            margin-top: 40px
++max-screen(1100px)
+    .volonteer_main
+        --padding: 40px
+        .center_row
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
+            grid-template-areas: "box_img box_img" "box1 box2" "box3 box4"
+        .volonteer_block
+            max-width: none
++max-screen(1025px)
+    .volonteer_main
+        --padding: 30px
++max-screen($breakpoint-lg)
+    .volonteer_main
+        .volonteer_block
+            min-height: 400px
+            p
+                margin-bottom: 20px
+            &:last-of-type
+                margin-bottom: 0
+            a
+                margin-bottom: 20px
+                margin-left: 0
++max-screen(800px)
+    .volonteer_main
+        .volonteer_block
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            .down_block
+                margin-top: 20px
+                position: relative
+                align-self: flex-end
+                left: auto
+                bottom: auto
+                width: 100%
+        .blue_box
+
+            .btn_block
+                width: 100%
+                align-self: flex-end
+                position: relative
+                left: auto
+                bottom: auto
++max-screen(700px)
+    .volonteer_main
+        --padding: 40px
+        .top_row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .col
+                width: 100%
+                max-width: none
+                &:first-of-type
+                    margin-right: auto
+                    margin-bottom: 20px
+        .center_row
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+            grid-template-areas: none
+        .volonteer_block
+            max-width: none
+            &.box1
+                grid-area: auto
+            &.box2
+                grid-area: auto
+            &.box3
+                grid-area: auto
+            &.box4
+                grid-area: auto
+        .volonteer_block_img
+            grid-area: auto
++max-screen(400px)
+    .volonteer_main
+        --padding: 30px
+        .top_row
+            .col
+                text-align: center
+        .volonteer_block
+            margin: 0 auto
+            text-align: center
+            a
+                margin-left: auto
+            .down_block
+                p
+                    text-align: center
+        .blue_box
+            .btn_block
+                a
+                    margin-left: auto
