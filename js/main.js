@@ -60,6 +60,9 @@ import {
     history_slider
 } from './template-parts/parts/history-section';
 
+import {
+    all_sponsors_slider
+} from './template-parts/parts/all_sponsors';
 
 header();
 footer();
@@ -87,3 +90,4 @@ news_block();
 article_block();
 our_programs_slider();
 history_slider();
+all_sponsors_slider()

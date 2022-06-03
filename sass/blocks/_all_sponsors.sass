@@ -1,0 +1,88 @@
+// all_sponsors_section
+.all_sponsors
+    .sponsors_row
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 54px
+    .sponsors_block
+        width: 100%
+        max-width: 268px
+        margin: 0 auto
+        .img_block
+            height: 108px
+            width: 100%
+            max-width: 248px
+            margin: 0 auto
+            // mix-blend-mode: darken
+        img
+            object-fit: contain
+            height: 100%
+    .level_block
+        background: #E1E7EC
+        border-radius: 60px
+        display: flex
+        justify-content: center
+        padding: 7px 10px
+        width: max-content
+        margin: 0 auto
+        span
+            font-weight: 500
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            color: #6182A2
+        svg
+            margin-right: 10px
+        &.gold
+            span
+                color: #EBAF15
+            path:first-of-type
+                fill: #EBAF15
+        &.silver
+            span
+                color: #979FA6
+            path:first-of-type
+                fill: #979FA6
+        &.bronze
+            span
+                color: #EC9B6D
+            path:first-of-type
+                fill: #EC9B6D
+
++max-screen($breakpoint-xl)
+    .all_sponsors
+        .sponsors_row
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 54px
++max-screen($breakpoint-lg)
+    .all_sponsors
+        .sponsors_row
+            display: flex
++max-screen($breakpoint-sm)
+    .all_sponsors
+        .slick-list
+            overflow: hidden
+            padding: 0 20% 0 20%
+        .slick-slide
+            margin-right: 25px
+            margin-left: 25px
+        .level_block
+            span
+                font-size: 12px
+                line-height: 100%
+                margin: 0
+                display: block
+                align-self: center
++max-screen(425px)
+    .all_sponsors
+        .sponsors_block
+            margin: 0 auto
+            max-width: none
+        .slick-list
+            overflow: hidden
+            padding: 0
+        .slick-slide
+            margin-right: 15px
+            margin-left: 15px
