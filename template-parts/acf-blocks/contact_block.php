@@ -5,6 +5,7 @@
     $address = get_sub_field('address');
     $phone__fax = get_sub_field('phone__fax');
     $map = get_sub_field('map_iframe');
+    $form = get_sub_field('form');
 ?>
 <?php if($has_map == false): ?>
 <section class="form_section text-<?php the_sub_field('font_size'); ?> section">
@@ -30,9 +31,11 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col form">
-                <?php echo do_shortcode('[contact-form-7 id="7" title="Contact"]'); ?>
-            </div>
+            <?php if($form): ?>
+                <div class="col form">
+                    <?php echo $form; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
