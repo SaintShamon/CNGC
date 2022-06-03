@@ -1,0 +1,68 @@
+//report block
+.reports
+    .reports_list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
+    .report_block
+        width: 100%
+        max-width: 460px
+        padding: 40px
+        background: #FFFFFF
+        border-radius: 60px
+        margin: 0 auto
+        h3
+            font-family: $font-family-base
+            font-size: 26px
+            font-weight: bold
+            line-height: 140%
+
+            +max-screen($breakpoint-1500)
+                font-size: 20px
+            +max-screen(375px)
+                font-size: 18px
+    .btn_block
+        margin-top: 40px
+        a
+            margin-left: 0
+            font-size: 15px
+            max-height: 62px
+            align-self: center
+            padding: 19px 40px
+            &:last-of-type
+                padding: 22px 44px
+            &:hover
+                transition: 0.3s ease-out
+                .color
+                    fill: white
+                .color-blue
+                    fill: $color-blue
+        svg
+            margin-right: 10px
+            transition: 0.3s ease-out
+            .color
+                fill: $color-blue
+            .color-blue
+                fill: white
++max-screen(1025px)
+    .reports
+        .reports_list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 30px
++max-screen($breakpoint-md)
+    .reports
+        .report_block
+            padding: 30px
+
++max-screen(630px)
+    .reports
+        .reports_list
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            gap: 30px
+        .report_block
+            text-align: center
+        .btn_block
+            a
+                margin-left: auto
