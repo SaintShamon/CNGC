@@ -64,6 +64,39 @@
             &:last-of-type
                 margin: 0
 
+.location_menu_block
+    padding: 20px 40px
+    .sub-menu
+        margin-top: 15px
+        margin-left: 20px
+        display: none
+        a
+            font-weight: 500
+            font-size: 12px
+            line-height: 120%
+        li
+            padding: 0
+            margin-bottom: 5px
+    a
+        font-weight: 500
+        font-size: 15px
+        line-height: 120%
+        letter-spacing: 0.08em
+        text-transform: uppercase
+        color: $color-blue
+    li
+        padding: 0
+        margin-bottom: 10px
+        width: 100%
+        height: auto
+        line-height: 100%
+    li.menu-item-has-children
+        position: relative
+        .menu-item__parent
+            display: flex
+            justify-content: space-between
+        .menu-item__icon
+
 +max-screen($breakpoint-xs)
     .side-panel
         width: 100%

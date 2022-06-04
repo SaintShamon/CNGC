@@ -16,6 +16,13 @@ function header() {
             $('body').removeClass('side-panel-overlay');
         }
     });
+
+    $('.location_menu_block li.menu-item-has-children .menu-item__icon').click(function () {
+        event.preventDefault();
+        $(this).attr('tabindex', 1).focus();
+        $(this).parents().eq(1).toggleClass('active');
+        $(this).parents().eq(1).find('.sub-menu').slideToggle(300);
+    });
 }
 
 
