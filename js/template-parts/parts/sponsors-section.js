@@ -53,7 +53,7 @@ function sponsors_slider() {
                 }
             ]
         });
-
+        slider.slick('slickGoTo', 0);
     });
 }
 
