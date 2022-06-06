@@ -18,7 +18,7 @@ function sponsors_slider() {
             cssEase: 'linear',
             autoplay: false,
             responsive: [{
-                    breakpoint: 1500,
+                    breakpoint: 1800,
                     settings: {
                         slidesToShow: 4,
                     }
