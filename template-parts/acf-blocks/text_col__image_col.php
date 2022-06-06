@@ -4,6 +4,7 @@
     $text = get_sub_field('text');
     $image = get_sub_field('image');
     $button = get_sub_field('button');
+    $bordered_button = get_sub_field('bordered_button');
 ?>
 <?php if($position == 'Left'): ?>
 <section class="understand section">
@@ -61,9 +62,16 @@
                 <?php endif; ?>
                 <?php if($text || $button): ?>
                     <div class="col">
-                        <?php if($text){ echo $text; } ?>
-                        <?php if($button): ?>
-                            <a href="<?php echo $button['url']; ?>" class="button button--secondary"><?php echo $button['title']; ?></a>
+                        <div class="content-block"><?php if($text){ echo $text; } ?></div>
+                        <?php if($button || $blue_button): ?>
+                            <div class="btn_block">
+                                <?php if($button): ?>
+                                    <a href="<?php echo $button['url']; ?>" class="button button--secondary"><?php echo $button['title']; ?></a>
+                                <?php endif; ?>
+                                <?php if($bordered_button): ?>
+                                    <a href="<?php echo $bordered_button['url']; ?>" class="button"><?php echo $bordered_button['title']; ?></a>
+                                <?php endif; ?>
+                            </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

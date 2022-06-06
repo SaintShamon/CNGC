@@ -17,3 +17,10 @@
         });
     });
 })(jQuery);
+
+jQuery('header .search .btn-search, header .search input[type="search"]').on('focus', function(){
+    jQuery('header .search form').addClass('active');
+});
+jQuery('header .search .btn-search, header .search input[type="search"]').on('blur', function(){
+    jQuery('header .search form').removeClass('active');
+});

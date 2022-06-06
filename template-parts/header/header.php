@@ -28,7 +28,7 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" class="input-search" placeholder="Search...">
+                            <?php echo do_shortcode('[ivory-search id="1226" title="Default Search Form"]'); ?>
                         </div>
                         <?php if($first_button || $second_button): ?>
                             <div class="btn_block">
@@ -73,7 +73,7 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" class="input-search" placeholder="Search...">
+                            <?php echo do_shortcode('[ivory-search id="1226" title="Default Search Form"]'); ?>
                         </div>
                         <div class="btn_block">
                             <a href="#" class="button button--secondary">DONATE NOW</a>
