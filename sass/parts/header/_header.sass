@@ -5,6 +5,11 @@ header
     width: 100%
     height: auto
 
+.fixed_header
+    position: fixed
+    width: 100%
+    left: 0
+    z-index: 2
 .top_header_block
     background-color: #FFFFFF
     width: 100%
@@ -12,7 +17,8 @@ header
         display: flex
         justify-content: space-between
         height: 68px
-
+    &.fixed_header
+        top: 0
     .right_top_block
         width: 100%
         max-width: max-content
@@ -38,7 +44,8 @@ header
         position: relative
         display: flex
         height: 56px
-
+    &.fixed_header
+        top: 68px
     nav
         width: 100%
         align-self: center
@@ -49,6 +56,9 @@ header
         display: flex
         justify-content: space-between
         width: 100%
+    li.current-menu-item
+        a
+            opacity: 0.7
     a
         color: white
         font-size: 16px
@@ -66,6 +76,8 @@ header
         a
             font-size: 14px
     +max-screen(1100px)
+        &.fixed_header
+            top: 0
         .header__nav
             display: none
         .header_logo
@@ -87,7 +99,8 @@ header
     height: fit-content
     position: relative
 
-    input
+    input,
+    form
         height: 44px
         width: 44px
         border-style: none

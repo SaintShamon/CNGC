@@ -44,13 +44,13 @@ import {
     form_select
 } from './template-parts/parts/form-section';
 
-import {
-    news_block
-} from './template-parts/parts/all_news';
+// import {
+//     news_block
+// } from './template-parts/parts/all_news';
 
-import {
-    article_block
-} from './template-parts/parts/article_section';
+// import {
+//     article_block
+// } from './template-parts/parts/article_section';
 
 import {
     our_programs_slider
@@ -86,8 +86,8 @@ reviews_slider();
 sponsors_slider();
 news_text();
 form_select();
-news_block();
-article_block();
+// news_block();
+// article_block();
 our_programs_slider();
 history_slider();
 all_sponsors_slider()
