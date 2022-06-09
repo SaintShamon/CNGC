@@ -1,6 +1,6 @@
 // article_section
 .article_section
-    .content-block h3 
+    .content-block .main_content h3 
         margin-top: 60px
         +max-screen($breakpoint-lg)
             margin-top: 48px
@@ -45,6 +45,10 @@
     .sidebar_block
         width: 100%
         max-width: 460px
+        .news_block 
+            .inner_block 
+                display: flex 
+                flex-direction: column
     .latest_post
         --news-padding: 40px
         .news_block
