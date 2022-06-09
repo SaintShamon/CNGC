@@ -101,6 +101,7 @@ get_header(); ?>
 												<?php the_excerpt(); ?>
 											</div>
 										</div>
+										<a href="<?php the_permalink(); ?>"></a>
 									</div>
 								<?php endwhile; wp_reset_postdata(); ?>
 							</div>

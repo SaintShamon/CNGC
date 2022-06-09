@@ -99,11 +99,6 @@
                             <option value="">2020</option>
                         </select>
                     </div>
-                    <ul class="yearFilter">
-                        <li class="yearFilter_item" data-year="2022">2022</li>
-                        <li class="yearFilter_item" data-year="2021">2021</li>
-                        <li class="yearFilter_item" data-year="2020">2020</li>
-                    </ul>
                 </div>
             </div>
             <div class="content_wrapper">
@@ -193,6 +188,7 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
                                     <p><?php the_excerpt(); ?></p>
                                 </div>
                             </div>
+                            <a href="<?php the_permalink(); ?>"></a>
                         </div>
                     <?php endwhile; ?>
                 </div>
