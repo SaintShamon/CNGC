@@ -7,6 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(  ) ?>>
+    <div class="overlay"></div>
     <div class="site">
         <?php echo get_template_part('template-parts/header/header'); ?>
         <main id="main">
