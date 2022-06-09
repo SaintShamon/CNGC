@@ -1,4 +1,24 @@
 <?php if(have_rows('staff_members_list')): ?>
+    <div class="member_popup">
+        <div class="row">
+            <div class="col-5 member_popup__imageWrapper">
+                <div class="member_popup__image">
+                    <img src="" alt="">
+                </div>
+                <div class="member_popup__name_email">
+                    <div class="member_popup__name">
+                    </div>
+                    <a class="member_popup__email" href="">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/email_icon_2.png" alt="">
+                    </a>
+                </div>
+                <div class="member_popup__position"></div>
+            </div>
+            <div class="col-7 member_popup__textWrapper">
+                <div class="member_popup__text"></div>
+            </div>
+        </div>
+    </div>
     <section class="agency section">
         <div class="container">
             <div class="main_block">
@@ -9,6 +29,7 @@
                             $name = get_sub_field('name');
                             $position = get_sub_field('position');
                             $address__email = get_sub_field('address__email');
+                            $popup_text = get_sub_field('popup_text');
                         ?>
                         <div class="agency_block">
                             <?php if($image): ?>
@@ -32,6 +53,11 @@
                                     <?php echo $address__email; ?>
                                 </div>
                             <?php endif; ?>
+                            <?php if($popup_text): ?>
+                                <div class="popup_text" style="display: none">
+                                    <?php echo $popup_text; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     <?php endwhile; ?>
                     <?php $last_item = get_sub_field('last_members_item'); ?>
@@ -46,4 +72,22 @@
             </div>
         </div>
     </section>
+<script>
+    jQuery('.agency_list .agency_block').click(function(){
+        var name = jQuery(this).find('.bio_block .title p').html();
+        var img = jQuery(this).find('img').attr('src');
+        var position = jQuery(this).find('.bio_block > p').html();
+        var email = jQuery(this).find('.email_block a').html();
+        var text = jQuery(this).find('.popup_text').html();
+        jQuery('.member_popup .member_popup__image img').attr('src', img);
+        jQuery('.member_popup .member_popup__email').attr('href', 'mailto:' + email);
+        jQuery('.member_popup .member_popup__name').html(name);
+        jQuery('.member_popup .member_popup__position').html(position);
+        jQuery('.member_popup .member_popup__text').html(text);
+        jQuery('body').addClass('opened-popup');
+    });
+    jQuery('.overlay').click(function(){
+        jQuery('body').removeClass('opened-popup');
+    });
+</script>
 <?php endif; ?>
