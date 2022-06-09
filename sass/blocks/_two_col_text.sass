@@ -4,11 +4,13 @@
 
     .content_wrapper
         margin-bottom: 60px
-        display: flex
-        justify-content: space-between
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        gap: 30px
+        +max-screen($breakpoint-md)
+            grid-template-columns: repeat(1,1fr)
     .col
         width: 100%
-        max-width: 705px
     .text--size
         &--26
             font-size: 26px
@@ -23,12 +25,10 @@
     .two_col_text
         .col
             width: 100%
-            max-width: 650px
 +max-screen($breakpoint-1500)
     .two_col_text
         .col
             width: 100%
-            max-width: 48%
         .content_wrapper
             margin-bottom: 40px
 +max-screen($breakpoint-xl)
@@ -45,8 +45,6 @@
     .two_col_text
         margin-bottom: 0
         padding-bottom: 0
-        .content_wrapper
-            display: block
         .col
             width: 100%
             max-width: none
