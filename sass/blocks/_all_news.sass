@@ -39,6 +39,10 @@
         max-height: 246px
         img
             border-radius: 60px
+            object-fit: contain
+            max-height: 246px
+            display: block
+            margin: 0 auto
     .img_block ~ .inner_block
         margin-top: calc( 266px - var(--news-padding) )
         .title_block
@@ -75,6 +79,11 @@
             margin-top: calc( 236px - var(--news-padding) )
             .title_block
                 height: 80px
+        .img_block
+            max-height: 216px
+            img
+                max-height: 216px
+
         .title_block
             height: 60px
             h3
@@ -89,6 +98,11 @@
             margin-top: calc( 266px - var(--news-padding) )
         .news_block
             margin: 0 auto
+        .img_block
+            max-height: 246px
+            img
+                object-fit: cover
+                max-height: 246px
 +max-screen($breakpoint-lg)
     .all_news
         .img_block ~ .inner_block
