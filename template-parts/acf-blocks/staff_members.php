@@ -74,6 +74,8 @@
     </section>
 <script>
     jQuery('.agency_list .agency_block').click(function(){
+        var top = jQuery(this).offset().top + 340;
+        jQuery('.member_popup').css('top', top + 'px');
         var name = jQuery(this).find('.bio_block .title p').html();
         var img = jQuery(this).find('img').attr('src');
         var position = jQuery(this).find('.bio_block > p').html();
