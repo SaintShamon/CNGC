@@ -11,11 +11,11 @@
                 ?>
                 <div class="inner_block">
                     <?php if($logo): ?>
-                        <div class="header_logo">
-                            <a href="<?php echo get_home_url(  ); ?>">
-                                <img src="<?php echo $logo; ?>" alt="">
-                            </a>
-                        </div>
+                    <div class="header_logo">
+                        <a href="<?php echo get_home_url(  ); ?>">
+                            <img src="<?php echo $logo; ?>" alt="">
+                        </a>
+                    </div>
                     <?php endif; ?>
                     <div class="right_top_block">
                         <div class="search">
@@ -31,14 +31,16 @@
                             <?php echo do_shortcode('[ivory-search id="1226" title="Default Search Form"]'); ?>
                         </div>
                         <?php if($first_button || $second_button): ?>
-                            <div class="btn_block">
-                                <?php if($first_button): ?>
-                                    <a href="<?php echo $first_button['url']; ?>" class="button button--secondary"><?php echo $first_button['title']; ?></a>
-                                <?php endif; ?>
-                                <?php if($second_button): ?>
-                                    <a href="<?php echo $second_button['url']; ?>" class="button"><?php echo $second_button['title']; ?></a>
-                                <?php endif; ?>
-                            </div>
+                        <div class="btn_block">
+                            <?php if($first_button): ?>
+                            <a href="<?php echo $first_button['url']; ?>"
+                                class="button button--secondary"><?php echo $first_button['title']; ?></a>
+                            <?php endif; ?>
+                            <?php if($second_button): ?>
+                            <a href="<?php echo $second_button['url']; ?>"
+                                class="button"><?php echo $second_button['title']; ?></a>
+                            <?php endif; ?>
+                        </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -85,7 +87,9 @@
                             <div class="line"></div>
                         </div>
                         <div class="location_menu_block">
-
+                            <nav class="header__nav">
+                                <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+                            </nav>
                         </div>
                     </div>
                 </div>
