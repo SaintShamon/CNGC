@@ -5,11 +5,13 @@
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 30px
+    .title_wrapper > .title h2
+        line-height: 0.8
+        padding-bottom: 6px
     .sponsors_block
         --pading: 40px
         position: relative
         width: 100%
-        max-width: 705px
         min-height: 534px
         padding: var(--pading)
         background: #FFFFFF
@@ -45,13 +47,14 @@
                         fill: $color-blue
 
         .title
-            margin-bottom: 10px
+            margin-bottom: 20px
             p
                 font-size: 26px
                 font-weight: 700
                 text-align: center
+                line-height: 1.385
         .price
-            margin-bottom: 10px
+            margin-bottom: 20px
             span
                 display: block
                 font-weight: 700

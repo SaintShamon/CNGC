@@ -1,5 +1,7 @@
 // two_col_img_section
-
+.single-events
+    .two_col_img 
+        padding-bottom: 98px
 .two_col_img
     position: relative
     padding-bottom: 110px
@@ -8,7 +10,7 @@
             width: 100%
             max-width: 697px
             margin-left: auto
-
+            padding-bottom: 6px
             img
                 max-width: 307px
     .col
@@ -17,9 +19,22 @@
             position: absolute
             max-width: 663px
             left: 0
-            bottom: -60px
+            top: -160px
+            bottom: auto
             border-radius: 60px
             overflow: hidden
+            .image_block,
+            img 
+                height: 100%
+            +max-screen(1500px)
+                top: -146px
+                bottom: auto
+            +max-screen(1200px)
+                bottom: auto
+                top: -126px
+            +max-screen(1100px)
+                bottom: auto
+                top: -106px
         &:last-of-type
             max-width: 697px
             margin-left: auto

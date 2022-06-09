@@ -201,6 +201,16 @@ header
             letter-spacing: 0.08em
             text-transform: uppercase
             color: $color-blue
+    li.one-column-sub-menu 
+        .sub-menu 
+            columns: 1
+            min-height: auto 
+            left: -50%
+            &::before,
+            &::after 
+                content: none
+            li:last-child 
+                margin-bottom: 0
     li.menu-item-has-children
         position: relative
         &::after

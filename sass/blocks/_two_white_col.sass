@@ -3,11 +3,15 @@
         display: flex
         justify-content: space-between
         flex-wrap: wrap
+        margin-bottom: -40px
+        +max-screen($breakpoint-xxl)
+            margin-bottom: -30px
+
     .col
         width: 100%
         max-width: 705px
-        min-height: 540px
         padding: 40px
+        padding-bottom: 60px
         background: #FFFFFF
         border-radius: 60px
         margin-bottom: 40px
@@ -17,7 +21,7 @@
         h4,.h4
             font-family: $font-family-base
             font-size: 26px
-            margin-bottom: 36px
+            margin-bottom: 40px
             font-weight: 700
         p
             margin-bottom: 30px

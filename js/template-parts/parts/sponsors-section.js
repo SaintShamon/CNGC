@@ -16,7 +16,8 @@ function sponsors_slider() {
             infinite: false,
             speed: 500,
             cssEase: 'linear',
-            autoplay: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
             responsive: [{
                     breakpoint: 1800,
                     settings: {

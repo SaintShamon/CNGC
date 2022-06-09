@@ -161,7 +161,7 @@
                                 </defs>
                             </svg>
                         <?php endif; ?>
-                        <span><?php if($rank == 'heart'){echo 'Presenting sponsor';}elseif($rank == 'silver'){echo 'Silver sponsor';}elseif($rank == 'gold'){echo 'Gold sponsor';} ?></span>
+                        <span><?php if($rank == 'heart'){echo 'Presenting sponsor';}elseif($rank == 'silver'){echo 'Silver sponsor';}elseif($rank == 'gold'){echo 'Gold sponsor';}elseif($rank == 'bronze'){echo 'Bronze sponsor';} ?></span>
                     </div>
                 </div>
             <?php endwhile; wp_reset_postdata(  ); ?>
