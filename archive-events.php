@@ -54,12 +54,26 @@ if($hero_banner):
         </div>
     </section>
 <?php endif; ?>
-<?php if(have_posts()): ?>
+
+<?php 
+
+$args = array(
+    'post_type' => 'events',
+    'meta_key'  => 'event_date',
+	'orderby'   => 'meta_value',
+	'order'     => 'ASC'
+);
+$query = new WP_Query( $args );
+
+?>
+
+
+<?php if($query->have_posts()): ?>
 <section class="events_main section">
     <div class="container">
         <div class="main_block">
             <?php $i = 1; ?>
-            <?php while(have_posts()): the_post(); ?>
+            <?php while($query->have_posts()): $query->the_post(); ?>
                 <div class="event_block box<?php echo $i; ?>">
                     <?php 
                         $date_string = get_field('event_date'); 
@@ -86,27 +100,7 @@ if($hero_banner):
                 </div>
                 <?php $i++; ?>
             <?php endwhile; ?>
-            <?php 
-                $donate_block = get_field('donate_block', 'options'); 
-                if($donate_block):
-                    $title = $donate_block['title'];
-                    $text = $donate_block['text'];
-                    $small_text = $donate_block['small_text'];
-                    $button = $donate_block['button'];
-            ?>
-                <div class="event_block_blue box_blue">
-                    <?php if($title): ?><p><b><?php echo $title; ?></b></p><?php endif; ?>
-                    <?php if($text): ?>
-                        <?php echo $text; ?>
-                    <?php endif; ?>
-                    <?php if($small_text): ?>
-                        <p class="small_text"><?php echo $small_text; ?></p>
-                    <?php endif; ?>
-                    <?php if($button): ?>
-                        <a href="<?php echo $button['url']; ?>" class="button"><?php echo $button['title']; ?></a>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+            <?php get_template_part('template-parts/global-blocks/donate'); ?>
         </div>
     </div>
 </section>
