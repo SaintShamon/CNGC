@@ -64,6 +64,10 @@ import {
     all_sponsors_slider
 } from './template-parts/parts/all_sponsors';
 
+import {
+    scrollToAnchor
+} from './template-parts/effects/smooth_scroll';
+
 header();
 footer();
 lazy();
@@ -90,4 +94,6 @@ form_select();
 // article_block();
 our_programs_slider();
 history_slider();
-all_sponsors_slider()
+all_sponsors_slider();
+
+scrollToAnchor();

@@ -13,11 +13,11 @@ function sponsors_slider() {
             slidesToShow: 5,
             slidesToScroll: 1,
             adaptiveHeight: true,
-            infinite: false,
-            speed: 500,
+            infinite: true,
+            speed: 2250,
             cssEase: 'linear',
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1,
             responsive: [{
                     breakpoint: 1800,
                     settings: {

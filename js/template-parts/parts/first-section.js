@@ -24,8 +24,10 @@ function first_slider() {
         //     $(window).trigger('heightChanges');
         // });
     });
+    $(document).ready(function(){
+        $('.home #main > section:eq(1)').attr('id', 'explore_block');
+    }); 
 }
-
 export {
     first_slider
 };
