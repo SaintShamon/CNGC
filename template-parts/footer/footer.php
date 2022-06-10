@@ -83,7 +83,7 @@
                 <?php endif; ?>
                 <?php if($bottom_right_text): ?>
                     <div class="website_block">
-                        <p><?php echo $bottom_right_text; ?></p>
+                        <?php echo $bottom_right_text; ?>
                     </div>
                 <?php endif; ?>
             </div>
