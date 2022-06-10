@@ -112,11 +112,17 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<?php $title = get_field('link_cards_block_title'); ?>
-<?php if(have_rows('link_cards')): ?>
+<?php 
+	$link_cards = get_field('article_page_link_cards', 'options');
+?>
+<?php if($link_cards): ?>
 <section class="userful_links section">
     <div class="container">
         <div class="main_block">
+			<?php 
+				$title = $link_cards['link_cards_block_title'];
+				$cards = $link_cards['link_cards'];
+			?>
 			<?php if($title): ?>
 				<div class="title_wrapper">
 					<div class="title">
@@ -126,7 +132,7 @@ get_header(); ?>
 			<?php endif; ?>
             <div class="content_wrapper">
                 <div class="links_row">
-					<?php while(have_rows('link_cards')): the_row(); ?>
+					<?php foreach($cards as $card): ?>
 						<?php 
 							$title = get_sub_field('card_title');
 							$button = get_sub_field('button');
@@ -146,7 +152,7 @@ get_header(); ?>
 								</a>
 							<?php endif; ?>
 						</div>
-                    <?php endwhile; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
