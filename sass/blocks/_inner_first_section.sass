@@ -165,6 +165,8 @@
                 max-width: 528px
             .img_block
                 max-width: 704px
+            .adres
+                max-width: 200px
         .text_block
             max-width: 528px
 
@@ -175,8 +177,7 @@
         .right_work_img
             width: 104px
             bottom: 40px
-        .adres
-            max-width: 200px
+
 +max-screen($breakpoint-xl)
     .inner_first_section
         &.down_content
@@ -184,6 +185,8 @@
                 max-width: 480px
             .img_block
                 max-width: 50vw
+            .adres
+                max-width: 180px
         .text_block
             max-width: 500px
         .img_block
@@ -194,8 +197,7 @@
                 width: max-content
                 top: 0
                 left: 0
-        .adres
-            max-width: 180px
+
 +max-screen($breakpoint-1200)
     .inner_first_section
         &.down_content
@@ -316,6 +318,8 @@
                 .title
                     h1
                         text-align: left
+            .adres
+                max-width: none
         &.article_first_section
             h1
                 font-size: 20px
@@ -325,7 +329,7 @@
         .bottom_row
             flex-wrap: wrap
         .adres
-            max-width: none
+
             padding-left: 24px
             &::before
                 position: absolute
@@ -337,7 +341,7 @@
                 background-size: contain
                 background-repeat: no-repeat
                 background-position: center
-                background-image: url('/assets/images/adres_icon.svg')
+                background-image: url('../assets/images/adres_icon.svg')
         .date
             max-width: none
             width: 100%
