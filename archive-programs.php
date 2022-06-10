@@ -15,32 +15,32 @@
                     $bottom_award_image = get_field('bottom_award_image', 'options');
                 ?>
                 <?php if($title): ?>
-                    <div class="title_wrapper">
-                        <div class="title">
-                            <h1><?php echo $title; ?></h1>
-                        </div>
+                <div class="title_wrapper">
+                    <div class="title">
+                        <h1><?php echo $title; ?></h1>
                     </div>
+                </div>
                 <?php endif; ?>
                 <?php if(have_rows('banner_social_icons', 'options')): ?>
-                    <div class="bottom_wrapper">
-                        <div class="socials_block">
-                            <ul>
-                                <?php while(have_rows('banner_social_icons', 'options')): the_row(); ?>
-                                    <?php 
+                <div class="bottom_wrapper">
+                    <div class="socials_block">
+                        <ul>
+                            <?php while(have_rows('banner_social_icons', 'options')): the_row(); ?>
+                            <?php 
                                         $icon = get_sub_field('icon');
                                         $link = get_sub_field('link');
                                     ?>
-                                    <li>
-                                        <a class="img_36" href="<?php echo $link; ?>" target="_blank" rel="noopener noreferrer">
-                                            <?php if( !empty( $icon ) ): ?>
-                                                <?php echo file_get_contents(esc_url(wp_get_original_image_path($icon['id']))); ?>
-                                            <?php endif; ?>
-                                        </a>
-                                    </li>
-                                <?php endwhile; ?>
-                            </ul>
-                        </div>
+                            <li>
+                                <a class="img_36" href="<?php echo $link; ?>" target="_blank" rel="noopener noreferrer">
+                                    <?php if( !empty( $icon ) ): ?>
+                                    <?php echo file_get_contents(esc_url(wp_get_original_image_path($icon['id']))); ?>
+                                    <?php endif; ?>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                        </ul>
                     </div>
+                </div>
                 <?php endif; ?>
             </div>
         </div>
@@ -48,10 +48,10 @@
     <div class="img_block"
         style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/assets/images/fill.png');">
         <?php if($top_award_image || $bottom_award_image): ?>
-            <div class="right_work_img">
-                <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>
-                <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image ?>" alt=""><?php endif; ?>
-            </div>
+        <div class="right_work_img">
+            <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>
+            <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image ?>" alt=""><?php endif; ?>
+        </div>
         <?php endif; ?>
     </div>
 </section>
@@ -70,18 +70,17 @@
                 $donate_button = $donate_block['donate_button'];
             ?>
             <?php if($content): ?>
-                <div class="text--size--26">
-                    <?php echo $content; ?>
-                </div>
+            <div class="text--size--26">
+                <?php echo $content; ?>
+            </div>
             <?php endif; ?>
             <div class="bottom_block">
                 <?php if($small_text): ?>
-                    <?php echo $small_text; ?>
+                <?php echo $small_text; ?>
                 <?php endif; ?>
                 <?php if($pdf_file): ?>
                 <a href="<?php echo $pdf_file['url'];  ?>" class="button button--secondary">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="color-blue" fill-rule="evenodd" clip-rule="evenodd"
                             d="M6.14786 0H14.1719L20.9724 7.08846V20.8756C20.9724 22.6027 19.5752 24 17.854 24H6.14786C4.42073 24 3.02344 22.6027 3.02344 20.8756V3.12443C3.02341 1.3973 4.4207 0 6.14786 0V0Z"
                             fill="" />
@@ -95,7 +94,8 @@
                 </a>
                 <?php endif; ?>
                 <?php if($donate_button): ?>
-                    <a href="<?php echo $donate_button['url']; ?>" class="button button--white"><?php echo $donate_button['title']; ?></a>
+                <a href="<?php echo $donate_button['url']; ?>"
+                    class="button button--white"><?php echo $donate_button['title']; ?></a>
                 <?php endif; ?>
             </div>
         </div>
@@ -112,30 +112,30 @@
     <div class="container">
         <div class="main_block">
             <?php if($title): ?>
-                <div class="title_wrapper">
-                    <div class="title">
-                        <h2><?php echo $title; ?></h2>
-                    </div>
+            <div class="title_wrapper">
+                <div class="title">
+                    <h2><?php echo $title; ?></h2>
                 </div>
+            </div>
             <?php endif; ?>
             <div class="content_wrapper">
                 <?php if($left_text || $right_text): ?>
-                    <div class="top_row">
-                        <?php if($left_text): ?>
-                            <div class="col">
-                                <div class="text--size--26">
-                                    <?php echo $left_text; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($right_text): ?>
-                            <div class="col">
-                                <div class="text--size--26">
-                                    <?php echo $right_text; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
+                <div class="top_row">
+                    <?php if($left_text): ?>
+                    <div class="col">
+                        <div class="text--size--26">
+                            <?php echo $left_text; ?>
+                        </div>
                     </div>
+                    <?php endif; ?>
+                    <?php if($right_text): ?>
+                    <div class="col">
+                        <div class="text--size--26">
+                            <?php echo $right_text; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
                 <?php endif; ?>
                 <?php 
                     $args = array(
@@ -145,25 +145,26 @@
                     $the_query = new WP_Query($args);
                 ?>
                 <?php if($the_query->have_posts()): ?>
-                    <div class="programs_list" id="programs_list">
-                        <?php while($the_query->have_posts()): $the_query->the_post(); ?>
-                            <div class="program_block">
-                                <div class="img_block">
-                                    <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
-                                    <a class="btn" href="<?php the_permalink(); ?>">
-                                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.24254 2.43937L14.4975 0.87563C15.4814 0.629645 16.1643 1.83571 15.4471 2.55288L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L0.552879 2.55288C-0.164284 1.83571 0.518579 0.629644 1.50252 0.87563L7.75746 2.43937C7.9167 2.47918 8.0833 2.47918 8.24254 2.43937Z"
-                                                fill="white" />
-                                    </a>
-                                </div>
-                                <div class="title_block">
-                                    <p><?php the_title(); ?></p>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
+                <div class="programs_list" id="programs_list">
+                    <?php while($the_query->have_posts()): $the_query->the_post(); ?>
+                    <div class="program_block">
+                        <div class="img_block">
+                            <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
+                            <a class="btn" href="<?php the_permalink(); ?>">
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.24254 2.43937L14.4975 0.87563C15.4814 0.629645 16.1643 1.83571 15.4471 2.55288L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L0.552879 2.55288C-0.164284 1.83571 0.518579 0.629644 1.50252 0.87563L7.75746 2.43937C7.9167 2.47918 8.0833 2.47918 8.24254 2.43937Z"
+                                        fill="white" />
+                            </a>
+                        </div>
+                        <div class="title_block">
+                            <p><?php the_title(); ?></p>
+                        </div>
+                        <a href="<?php the_permalink(); ?>"></a>
                     </div>
+                    <?php endwhile; ?>
+                </div>
                 <?php endif; ?>
             </div>
         </div>
@@ -184,28 +185,28 @@
     <div class="container">
         <div class="main_block">
             <?php if($title): ?>
-                <div class="title_wrapper">
-                    <div class="title">
-                        <h2><?php echo $title; ?></h2>
-                    </div>
+            <div class="title_wrapper">
+                <div class="title">
+                    <h2><?php echo $title; ?></h2>
                 </div>
+            </div>
             <?php endif; ?>
             <div class="content_wrapper">
                 <?php if($image): ?>
-                    <div class="col">
-                        <div class="image_block">
-                            <img src="<?php echo $image; ?>" alt="">
-                        </div>
+                <div class="col">
+                    <div class="image_block">
+                        <img src="<?php echo $image; ?>" alt="">
                     </div>
+                </div>
                 <?php endif; ?>
                 <div class="col">
                     <?php if($subtitle): ?>
-                        <p class="text--size--26"><b><?php echo $subtitle; ?></b></p>
+                    <p class="text--size--26"><b><?php echo $subtitle; ?></b></p>
                     <?php endif; ?>
                     <?php if($small_text): ?>
-                        <div class="date text--size--16">
-                            <?php echo $small_text; ?>
-                        </div>
+                    <div class="date text--size--16">
+                        <?php echo $small_text; ?>
+                    </div>
                     <?php endif; ?>
                 </div>
             </div>
@@ -226,46 +227,47 @@
                 $cards = $cards['cards']
             ?>
             <?php if($title): ?>
-                <div class="title_wrapper">
-                    <div class="title">
-                        <h2><?php echo $title; ?></h2>
-                    </div>
+            <div class="title_wrapper">
+                <div class="title">
+                    <h2><?php echo $title; ?></h2>
                 </div>
+            </div>
             <?php endif; ?>
             <div class="content_wrapper">
                 <?php if($text): ?>
-                    <div class="top_row">
-                        <p class="text--size--26"><?php echo $text; ?></p>
-                    </div>
+                <div class="top_row">
+                    <p class="text--size--26"><?php echo $text; ?></p>
+                </div>
                 <?php endif; ?>
                 <div class="support_list">
                     <?php foreach($cards as $card): ?>
-                        <?php 
+                    <?php 
                             $title = $card['title'];
                             $text = $card['text'];     
                             $image = $card['image'];     
                             $button = $card['button'];     
                         ?>
-                        <div class="support_block">
-                            <?php if($image): ?>
-                                <div class="img_block">
-                                    <img src="<?php echo $image; ?>" alt="">
-                                </div>
-                            <?php endif; ?>
-                            <div class="content_block">
-                                <?php if($title): ?>
-                                    <h3 class="text--size--26"><?php echo $title; ?></h3>
-                                <?php endif; ?>
-                                <?php if($text): ?>
-                                    <p class="text--size--26"><?php echo $text; ?></p>
-                                <?php endif; ?>
-                                <?php if($button): ?>
-                                    <div class="btn_block">
-                                        <a href="<?php echo $button['url'] ?>" class="button white--button"><?php echo $button['title']; ?></a>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
+                    <div class="support_block">
+                        <?php if($image): ?>
+                        <div class="img_block">
+                            <img src="<?php echo $image; ?>" alt="">
                         </div>
+                        <?php endif; ?>
+                        <div class="content_block">
+                            <?php if($title): ?>
+                            <h3 class="text--size--26"><?php echo $title; ?></h3>
+                            <?php endif; ?>
+                            <?php if($text): ?>
+                            <p class="text--size--26"><?php echo $text; ?></p>
+                            <?php endif; ?>
+                            <?php if($button): ?>
+                            <div class="btn_block">
+                                <a href="<?php echo $button['url'] ?>"
+                                    class="button white--button"><?php echo $button['title']; ?></a>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                     <?php endforeach; ?>
                 </div>
             </div>
