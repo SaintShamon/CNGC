@@ -20,6 +20,15 @@ function footer() {
             $(this).find('.sub-menu').slideUp(300);
         });
     }
+    var btn = $('#button_top');
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+        $('.top_header_block').removeClass('fixed_header');
+        $('.bottom_header_block').removeClass('fixed_header');
+    });
 }
 
 
