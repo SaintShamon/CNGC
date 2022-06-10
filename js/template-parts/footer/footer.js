@@ -37,7 +37,7 @@ function footer() {
                     $('#button_top').removeClass('show');
                 }
                 $('#button_top').addClass('show');
-                setTimeout(scrollEnd, 5000);
+                setTimeout(scrollEnd, 3000);
             };
         });
     });
