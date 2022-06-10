@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="img_block"
-        style="background: left center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/assets/images/fill.png');">
+        style="background: left center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/wp-content/themes/CNGC/assets/images/fill.png');">
         <?php if($top_award_image || $bottom_award_image): ?>
             <div class="right_work_img">
                 <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>

@@ -10,7 +10,7 @@
             ?>
             <?php if($image): ?>
                 <div class="col img_col"
-                    style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/assets/images/fill.png');">
+                    style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/wp-content/themes/CNGC/assets/images/fill.png');">
                 </div>
             <?php endif; ?>
             <div class="col">
