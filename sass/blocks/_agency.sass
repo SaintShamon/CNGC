@@ -13,6 +13,7 @@
         border-radius: 60px
         overflow: hidden
         min-height: 604px
+        cursor: pointer
         .img_block
             border-radius: 60px
             overflow: hidden
@@ -161,7 +162,7 @@
             min-height: auto
 .overlay
     content: ""
-    position: fixed 
+    position: fixed
     top: 0
     left: 0
     width: 100%
@@ -177,7 +178,7 @@
     opacity: 0
     visibility: visible
     width: 65%
-    height: auto 
+    height: auto
     position: fixed
     left: 50%
     transition: .3s
@@ -196,28 +197,28 @@
         width: 90%
     +max-screen($breakpoint-md)
         position: absolute
-    .opened-popup & 
+    .opened-popup &
         opacity: 1
         visibility: visible
         transform: translate(-50%, -50%)
         z-index: 100
-    &__name 
+    &__name
         font-size: 24px
-        +max-screen(1200px) 
+        +max-screen(1200px)
             font-size: 20px
     &__name_email
         display: flex
         justify-content: space-between
         padding-right: 18px
         align-items: center
-    &__email 
+    &__email
         width: 32px
         height: 32px
         margin-left: 12px
         +max-screen($breakpoint-md)
             width: 24px
             height: 24px
-    &__image 
+    &__image
         border-radius: 30px
         overflow: hidden
         margin-bottom: 12px
@@ -225,7 +226,7 @@
             width: 35%
             +max-screen(1200px)
                 width: 40%
-            +max-screen($breakpoint-md) 
+            +max-screen($breakpoint-md)
                 width: 100%
     &__position
         font-weight: 700
@@ -236,16 +237,16 @@
             font-size: 16px
         +max-screen($breakpoint-md)
             margin-top: 12px
-    .row 
+    .row
         display: flex
         +max-screen($breakpoint-md)
             flex-direction: column
     &__text
-        p 
+        p
             margin-bottom: 18px
             &:last-child
                 margin-bottom: 0
-        &Wrapper 
+        &Wrapper
             padding-left: 45px
             width: 65%
             +max-screen(1200px)
