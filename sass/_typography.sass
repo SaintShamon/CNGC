@@ -339,24 +339,27 @@ h6,.h6
 			+max-screen($breakpoint-md)
 
 		&>li
-			display: block
+			display: list-item
+			list-style-type: disc
 			position: relative
 			margin-bottom: 5px
 			&:nth-last-child(1)
 				margin-bottom: 0
-			&:before
-				content: ''
-				background-color: $color-blue
-				width: 4px
-				height: 4px
-				min-width: 4px
-				border-radius: 50%
-				margin-bottom: 0.12em
-				margin-right: 18px
-				font-weight: 700
-				position: absolute
-				right: 100%
-				top: calc(50% - 1px)
+			&::marker
+				color: $default-text-color
+			// &:before
+			// 	content: ''
+			// 	background-color: $color-blue
+			// 	width: 4px
+			// 	height: 4px
+			// 	min-width: 4px
+			// 	border-radius: 50%
+			// 	margin-bottom: 0.12em
+			// 	margin-right: 18px
+			// 	font-weight: 700
+			// 	position: absolute
+			// 	right: 100%
+			// 	top: calc(50% - 1px)
 			ol
 				padding: 10px
 				padding-left: rem(30px)

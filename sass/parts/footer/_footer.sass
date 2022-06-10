@@ -55,7 +55,7 @@ footer
         position: absolute
         background: #fff
         padding: 0
-        background-image: url('http://cngc.purpleplanet.website/wp-content/uploads/2022/06/footer_form_arrow.svg')
+        background-image: url('../assets/images/footer_form_arrow.svg')
         background-size: 10px
         background-repeat: no-repeat
         font-size: 0
@@ -68,16 +68,15 @@ footer
         transition: 0.3s ease-out
         background-position: bottom 22px right 23px
 
-        svg
-            margin: 0 auto
         &:hover
             background: $color-blue
             border: 1px solid #FFFFFF
             transition: 0.3s ease-out
+            background-image: url('../assets/images/footer_form_arrow_white.svg')
+            background-size: 10px
+            background-repeat: no-repeat
+            background-position: bottom 22px right 23px
 
-            path
-                fill: #fff
-                transition: .3s
     .center_footer_wrapper
         margin-top: 60px
         margin-bottom: 60px
@@ -213,6 +212,8 @@ footer
             width: 51px
             height: 51px
             background-position: bottom 16px right 18px
+            &:hover
+                background-position: bottom 16px right 18px
         .top_footer_wrapper
             padding-top: 47px
             padding-bottom: 47px
