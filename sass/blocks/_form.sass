@@ -78,8 +78,8 @@
             select
                 -webkit-appearence: none
                 font-family: Archivo,sans-serif
-                background: #fff
-                border: 1px solid #084074
+                background: transparent
+                border: 0
                 border-radius: 69px
                 font-size: 20px
                 font-weight: 400
@@ -91,10 +91,16 @@
                 +max-screen($breakpoint-xl)
                     padding: 13px 24px !important
                     height: 52px
-                    border: 1px solid #084074
+                    border: 0
                     border-radius: 69px
                     font-size: 16px
                     font-weight: 400
+                +max-screen($breakpoint-md)
+                    padding-left: 10px !important
+                    padding-right: 0 !important
+                    padding-top: 0 !important
+                    padding-bottom: 0 !important
+                    height: 36px
 +max-screen($breakpoint-1920)
 
 +max-screen($breakpoint-xxl)
