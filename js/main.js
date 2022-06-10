@@ -72,6 +72,10 @@ import {
     events_slider
 } from './template-parts/blocks/events-slider';
 
+import {
+    disabledItem
+} from './template-parts/blocks/form';
+
 
 header();
 footer();
@@ -103,3 +107,4 @@ all_sponsors_slider();
 
 scrollToAnchor();
 events_slider();
+disabledItem();
