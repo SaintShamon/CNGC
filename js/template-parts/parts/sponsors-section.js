@@ -18,6 +18,7 @@ function sponsors_slider() {
             cssEase: 'linear',
             autoplay: true,
             autoplaySpeed: 1,
+            variableWidth: true,
             responsive: [{
                     breakpoint: 1800,
                     settings: {
@@ -45,11 +46,11 @@ function sponsors_slider() {
                     }
                 },
                 {
-                    breakpoint: 376,
+                    breakpoint: 426,
                     settings: {
                         slidesToShow: 1,
+                        variableWidth: false,
                         // centerMode: true,
-                        dots: true,
                     }
                 }
             ]

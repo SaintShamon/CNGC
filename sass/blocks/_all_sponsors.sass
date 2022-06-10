@@ -56,18 +56,22 @@
             display: grid
             grid-template-columns: repeat(3, 1fr)
             gap: 54px
+            max-width: calc(268px *3 + 60px)
+            margin: 0 auto
 +max-screen($breakpoint-lg)
     .all_sponsors
         .sponsors_row
             display: flex
-+max-screen($breakpoint-sm)
-    .all_sponsors
         .slick-list
             overflow: hidden
-            padding: 0 20% 0 20%
+            // padding: 0 20% 0 20%
         .slick-slide
-            margin-right: 25px
-            margin-left: 25px
+            width: 268px
+            margin-right: 40px
+            // margin-left: 30px
++max-screen($breakpoint-sm)
+    .all_sponsors
+
         .level_block
             span
                 font-size: 12px
@@ -75,14 +79,15 @@
                 margin: 0
                 display: block
                 align-self: center
-+max-screen(425px)
++max-screen(426px)
     .all_sponsors
         .sponsors_block
             margin: 0 auto
             max-width: none
-        .slick-list
-            overflow: hidden
-            padding: 0
+        // .slick-list
+        //     overflow: hidden
+        //     padding: 0
         .slick-slide
-            margin-right: 15px
-            margin-left: 15px
+            // width: 75vw
+            margin-right: auto
+            margin-left: auto

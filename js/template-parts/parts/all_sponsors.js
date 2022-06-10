@@ -17,6 +17,7 @@ function all_sponsors_slider() {
             speed: 500,
             cssEase: 'linear',
             autoplay: true,
+            variableWidth: true,
             responsive: [{
 
                     breakpoint: 4000,
@@ -42,9 +43,10 @@ function all_sponsors_slider() {
                     }
                 },
                 {
-                    breakpoint: 376,
+                    breakpoint: 426,
                     settings: {
                         slidesToShow: 1,
+                        variableWidth: false,
                         // centerMode: true,
                     }
                 }
