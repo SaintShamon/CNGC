@@ -13,13 +13,13 @@ function events_slider(){
             autoplay: true,
             autoplaySpeed: 1,
             responsive: [{
-                    breakpoint: 1024,
+                    breakpoint: 1100,
                     settings: {
                         slidesToShow: 2,
                     }
                 },
                 {
-                    breakpoint: 576,
+                    breakpoint: 769,
                     settings: {
                         slidesToShow: 1,
                     }

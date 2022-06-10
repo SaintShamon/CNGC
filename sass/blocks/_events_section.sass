@@ -72,7 +72,6 @@
 +max-screen($breakpoint-1500)
     .events_section
         .event_block
-            max-width: 360px
             height: 455px
 
 +max-screen($breakpoint-xl)
@@ -92,9 +91,8 @@
     .events_section
         .events_row
             display: grid
-            grid-template-columns: repeat(2, 1fr)
+            grid-template-columns: repeat(1, 1fr)
             gap: 30px
-            max-width: 750px
             margin: 40px auto 0
         .event_block
             margin: 0 auto
@@ -115,3 +113,22 @@
         .title_event
             p
                 font-size: 20px
+.events_section 
+    .slick-list
+        .slick-slide 
+            margin: 0 15px
++max-screen($breakpoint-md)
+    .events_section 
+        .slick-list
+            .slick-slide 
+                margin: 0 20px
+                .event_block
+                    min-width: 100% !important
+                    display: block !important
++max-screen($breakpoint-sm)
+    .events_section 
+        .slick-list
+            margin-left: -10px
+            margin-right: -10px
+            .slick-slide 
+                margin: 0 10px
