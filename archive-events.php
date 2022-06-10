@@ -79,6 +79,7 @@ $query = new WP_Query( $args );
                         $date_string = get_field('event_date'); 
                         $date = DateTime::createFromFormat('Ymd', $date_string);
                         $time = get_field('event_time');
+                        $link = get_field('event_link');
                     ?>
                     <div class="top_event">
                         <div class="date">
@@ -96,7 +97,7 @@ $query = new WP_Query( $args );
                     <div class="title_event">
                         <p><?php the_title(); ?></p>
                     </div>
-                    <a href="<?php the_permalink(  ) ?>"></a>
+                    <a href="<?php if(!empty( $link )){echo $link;}else{ the_permalink(); } ?>"></a>
                 </div>
                 <?php $i++; ?>
             <?php endwhile; ?>
