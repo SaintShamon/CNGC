@@ -14,8 +14,8 @@ function first_slider() {
             speed: 500,
             cssEase: 'linear',
             adaptiveHeight: true,
-            autoplay: false,
-            // autoplaySpeed: 3000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             prevArrow: block.find('.bottom_wrapper .arrow_block .prev_btn'),
             nextArrow: block.find('.bottom_wrapper .arrow_block .next_btn')
         });

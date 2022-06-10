@@ -68,6 +68,11 @@ import {
     scrollToAnchor
 } from './template-parts/effects/smooth_scroll';
 
+import {
+    events_slider
+} from './template-parts/blocks/events-slider';
+
+
 header();
 footer();
 lazy();
@@ -97,3 +102,4 @@ history_slider();
 all_sponsors_slider();
 
 scrollToAnchor();
+events_slider();

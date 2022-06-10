@@ -13,11 +13,12 @@ function reviews_slider() {
             slidesToShow: 2,
             slidesToScroll: 1,
             adaptiveHeight: true,
-            infinite: false,
+            infinite: true,
             speed: 500,
             initialSlide: 1,
-            autoplay: false,
+            autoplay: true,
             variableWidth: true,
+            autoplaySpeed: 10000,
             responsive: [{
                 breakpoint: 1920,
                 settings: {

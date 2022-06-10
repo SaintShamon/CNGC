@@ -28,7 +28,7 @@
             <?php 
                 $args = array(
                     'post_type' => 'events',
-                    'posts_per_page' => '3',
+                    'posts_per_page' => -1,
                 );
                 $the_query = new WP_Query($args);
                 if($the_query->have_posts()):
