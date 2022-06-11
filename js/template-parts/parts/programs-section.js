@@ -11,7 +11,7 @@ function programs_slider() {
             dots: true,
             arrows: false,
             slidesToShow: 4,
-            infinite: false,
+            infinite: true,
             speed: 500,
             cssEase: 'linear',
             autoplay: true,
