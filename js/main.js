@@ -40,9 +40,6 @@ import {
     news_text
 } from './template-parts/parts/news_img_section';
 
-import {
-    form_select
-} from './template-parts/parts/form-section';
 
 // import {
 //     news_block
@@ -76,6 +73,9 @@ import {
     disabledItem
 } from './template-parts/blocks/form';
 
+import {
+    form_select
+} from './template-parts/parts/form-section';
 
 header();
 footer();
@@ -98,13 +98,13 @@ programs_slider();
 reviews_slider();
 sponsors_slider();
 news_text();
-form_select();
-// news_block();
-// article_block();
+disabledItem();
 our_programs_slider();
 history_slider();
 all_sponsors_slider();
 
 scrollToAnchor();
 events_slider();
-disabledItem();
+form_select();
+// news_block();
+// article_block();
