@@ -61,7 +61,7 @@
 <?php if($main_post): ?>
 <section class="news_img_section section">
     <div class="container">
-        <div class="main_block">
+        <a class="main_block" href="<?php the_permalink($main_post->ID) ?>">
             <div class="img_block">
                 <img src="<?php echo get_the_post_thumbnail_url( $main_post->ID ) ?>" alt="">
             </div>
@@ -78,7 +78,7 @@
                     <p><?php echo get_the_excerpt($main_post->ID); ?></p>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </section>
 <?php endif; ?>
