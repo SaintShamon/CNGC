@@ -223,7 +223,7 @@
                             <?php endif; ?>
                             <?php if($last_card['file_to_download']): ?>
                                 <div class="btn_block">
-                                    <a href="<?php echo $last_card['file_to_download']['url'] ?>" download class="button button--white">
+                                    <a href="<?php echo $last_card['file_to_download']['url'] ?>" class="button button--white">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path class="color-blue" fill-rule="evenodd" clip-rule="evenodd"
