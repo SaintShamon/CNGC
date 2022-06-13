@@ -76,7 +76,6 @@
             <?php endif; ?>
             <div class="bottom_block">
                 <?php if($small_text): ?>
-                <?php echo $small_text; ?>
                 <?php endif; ?>
                 <?php if($pdf_file): ?>
                 <a href="<?php echo $pdf_file['url'];  ?>" class="button button--secondary">
