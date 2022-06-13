@@ -168,13 +168,15 @@
         </div>
     <?php endif; ?>
 </section>
+<?php 
+    $title = get_field('become_sponsor_title');
+    $last_card = get_field('last_card');
+?>
+<?php if(have_rows('become_sponsor_cards')): ?>
 <section class="become_sponsor section">
     <div class="container">
         <div class="main_block">
-            <?php 
-                $title = get_field('become_sponsor_title');
-                $last_card = get_field('last_card');
-            ?>
+           
             <?php if($title): ?>
                 <div class="title_wrapper">
                     <div class="title">
@@ -182,48 +184,46 @@
                     </div>
                 </div>
             <?php endif; ?>
-            <?php if(have_rows('become_sponsor_cards')): ?>
-                <div class="become_sponsor_wrapper">
-                    <?php while(have_rows('become_sponsor_cards')): the_row(); ?>
-                        <?php 
-                            $sponsor_rank = get_sub_field('sponsor_rank');
-                            $price = get_sub_field('price');
-                            $text = get_sub_field('text');
-                            $button = get_sub_field('button');
-                        ?>
-                        <div class="sponsors_block">
-                            <?php if($sponsor_rank): ?>
-                                <div class="title">
-                                    <p><?php echo $sponsor_rank ?></p>
-                                </div>
-                            <?php endif; ?>
-                            <?php if($price): ?>
-                                <div class="price">
-                                    <span><?php echo $price; ?></span>
-                                </div>
-                            <?php endif; ?>
-                            <?php if($text): ?>
-                                <div class="content">
-                                    <?php echo $text; ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if($button): ?>
-                                <div class="btn_block">
-                                    <a href="<?php echo $button['url']; ?>" class="button button--white"><?php echo $button['title']; ?></a>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endwhile; ?>
-                    <?php if($last_card): ?>
+            <div class="become_sponsor_wrapper">
+                <?php while(have_rows('become_sponsor_cards')): the_row(); ?>
+                    <?php 
+                        $sponsor_rank = get_sub_field('sponsor_rank');
+                        $price = get_sub_field('price');
+                        $text = get_sub_field('text');
+                        $button = get_sub_field('button');
+                    ?>
+                    <div class="sponsors_block">
+                        <?php if($sponsor_rank): ?>
+                            <div class="title">
+                                <p><?php echo $sponsor_rank ?></p>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($price): ?>
+                            <div class="price">
+                                <span><?php echo $price; ?></span>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($text): ?>
+                            <div class="content">
+                                <?php echo $text; ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($button): ?>
+                            <div class="btn_block">
+                                <a href="<?php echo $button['url']; ?>" class="button button--white"><?php echo $button['title']; ?></a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+                <?php if($last_card): ?>
+                    <?php if($last_card['text']): ?>
                         <div class="sponsors_block blue_block">
-                            <?php if($last_card['text']): ?>
                                 <div class="content">
                                     <div class="text--size--26"><?php echo $last_card['text']; ?></div>
                                 </div>
-                            <?php endif; ?>
                             <?php if($last_card['file_to_download']): ?>
                                 <div class="btn_block">
-                                    <a href="<?php echo $last_card['file_to_download']['url'] ?>" class="button button--white">
+                                    <a href="<?php echo $last_card['file_to_download']['url'] ?>" target="_blank" class="button button--white">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path class="color-blue" fill-rule="evenodd" clip-rule="evenodd"
@@ -241,26 +241,26 @@
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </section>
+<?php endif; ?>
+
 <?php 
     $image__text_block = get_field('image__text_block');
-    if($image__text_block):
+    $image = $image__text_block['image'];
+    $logo_for_title = $image__text_block['logo_for_title'];
+    $content = $image__text_block['content'];
+    $left_button = $image__text_block['left_button'];
+    $right_button = $image__text_block['right_button'];
+    if($image || $logo_for_title || $content || $left_button || $right_button):
 ?>
 <section class="two_col_img section">
     <div class="section-bg"></div>
     <div class="container">
         <div class="main_block">
-            <?php 
-                $image = $image__text_block['image'];
-                $logo_for_title = $image__text_block['logo_for_title'];
-                $content = $image__text_block['content'];
-                $left_button = $image__text_block['left_button'];
-                $right_button = $image__text_block['right_button'];
-            ?>
             <?php if($logo_for_title): ?>
                 <div class="title_wrapper">
                     <div class="title_img title">
