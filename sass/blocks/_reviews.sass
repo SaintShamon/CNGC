@@ -27,7 +27,6 @@
             line-height: 140%
             color: $color-blue
     .slick-list
-        overflow: inherit
         padding: 0 20% 0 20%
     .slick-slide
         margin-right: 31px
@@ -45,6 +44,8 @@
     .reviews
         .container:last-of-type
             max-width: none
+        .slick-list
+            overflow: inherit
 +max-screen($breakpoint-xxl)
 
 +max-screen($breakpoint-1500)
