@@ -10,7 +10,7 @@ function reviews_slider() {
         slider.slick({
             dots: true,
             arrows: false,
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: true,
             infinite: true,
