@@ -92,6 +92,7 @@ $ajaxParams = array(
 );
 
 ?>
+
 <section class="all_news section">
     <div class="container">
         <div class="title_wrapper">
@@ -100,36 +101,42 @@ $ajaxParams = array(
             </div>
             <div class="btn_block">
                 <p>Archive articles</p>
+                <!-- <div class="custom-select" style="">
+                <select name="select_year" id="select_year">
+                    <option value="sel" disabled="" selected="">Choose a year</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                </select>
+            </div> -->
+
                 <?php 
 
-            $terms_year = array(
-                'post_type'         => array('post'),
-                'posts_per_page' => '-1'
-            );
+                $terms_year = array(
+                    'post_type'         => array('post'),
+                    'posts_per_page' => '-1'
+                );
 
-            $years = array();
-            $query_year = new WP_Query( $terms_year );
+                $years = array();
+                $query_year = new WP_Query( $terms_year );
 
-            if ( $query_year->have_posts() ) :
-                while ( $query_year->have_posts() ) : $query_year->the_post();
-                    $year = get_the_date('Y');
-                    if(!in_array($year, $years)){
-                        $years[] = $year;
-                    }
-                endwhile;
-                wp_reset_postdata();
-            endif;
-            if ($years) :
+                if ( $query_year->have_posts() ) :
+                    while ( $query_year->have_posts() ) : $query_year->the_post();
+                        $year = get_the_date('Y');
+                        if(!in_array($year, $years)){
+                            $years[] = $year;
+                        }
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+
+                if ($years) :
+
             ?>
-
                 <div class="select_block">
                     <select name="archive-year-select" id="archive-year-select">
                         <option value="sel">Choose a year</option>
-
                         <?php foreach ($years as $year) { ?>
-
-                        <option value=""><?php echo $year;?> </option>
-
+                        <option value=""><?php echo $year;?></option>
                         <?php } ; ?>
                     </select>
                 </div>
@@ -144,7 +151,6 @@ $ajaxParams = array(
         get_template_part('template-parts/news/news-archive','pagination', $ajaxParams);
     ?>
     </div>
-
 </section>
 <?php 
 $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_post_views_count', 'orderby' => 'meta_value_num', 'date_query' => array( array( 'column' => 'post_date_gmt', 'before' => 'this year', ),), 'order' => 'DESC'  ) );
