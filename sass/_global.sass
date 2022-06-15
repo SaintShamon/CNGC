@@ -116,7 +116,8 @@ iframe
 	+max-screen($breakpoint-sm)
 		margin: 60px 0 0
 	.next,
-	.prev
+	.prev,
+	.archive-pagination__btn--next
 		display: flex
 		min-width: 40px
 		min-height: 40px
@@ -132,7 +133,7 @@ iframe
 			path
 				fill: #fff
 				transition: 0.3s ease-out
-	.next
+	.next, .archive-pagination__btn--next
 		margin-left: 20px
 		+max-screen(425px)
 			margin-left: 10px
@@ -173,7 +174,7 @@ iframe
 			transition: 0.3s ease-out
 		+max-screen(425px)
 			margin-right: 10px
-	span.current
+	.current
 		background-color: $color-blue
 		color: #fff
 

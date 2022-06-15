@@ -72,6 +72,10 @@ import {
     events_slider
 } from './template-parts/blocks/events-slider';
 
+import {
+    news_filter
+} from './template-parts/news/news-archive';
+
 
 header();
 footer();
@@ -103,3 +107,5 @@ all_sponsors_slider();
 
 scrollToAnchor();
 events_slider();
+
+news_filter();

@@ -1,9 +1,9 @@
-<?php get_header(); ?>
-<?php 
-    $pageID = get_option( 'page_for_posts' );;
-    $banner = get_field('banner', $pageID);
-?>
-<?php if($banner): ?>
+<?php get_header();
+
+$pageID = get_option( 'page_for_posts' );;
+$banner = get_field('banner', $pageID);
+if($banner): ?>
+
 <section class="inner_first_section section">
     <div class="section-bg"></div>
     <div class="container">
@@ -82,70 +82,60 @@
     </div>
 </section>
 <?php endif; ?>
-<?php if(have_posts()): ?>
-<section class="all_news section">
-    <div class="container">
-        <div class="main_block">
-            <div class="title_wrapper">
-                <div class="title">
-                    <h2>All news</h2>
-                </div>
-                <div class="btn_block">
-                    <p>Archive articles</p>
-                    <div class="custom-select" style="">
-                        <select name="select_year" id="select_year">
-                            <option value="sel" disabled="" selected="">Choose a year</option>
-                            <option value="">2021</option>
-                            <option value="">2020</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="content_wrapper">
-                <div class="news_list">
-                    <?php while(have_posts()): the_post(); ?>
-                        <a class="news_block" href="<?php the_permalink(); ?>" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="display: flex; flex-direction: column;"<?php endif; ?>>
-                            <?php if(!empty(get_the_post_thumbnail_url(  ))): ?>
-                                <div class="img_block">
-                                    <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
-                                </div>
-                            <?php endif; ?>
-                            <div class="inner_block" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="margin-top: auto;"<?php endif; ?>>
-                                <div class="date_block">
-                                    <span><?php echo get_the_date('F j, Y') ?></span>
-                                </div>
-                                <div class="title_block">
-                                    <?php 
-                                        $post_title = get_the_title();
-                                        if(!empty(get_the_post_thumbnail_url(  ))){
-                                            $max = 79;
-                                        }
-                                        else{
-                                            $max = 49;
-                                        }
-                                        if (strlen($post_title) > $max)
-                                        $post_title = substr($post_title, 0, $max - 3) . '...';
-                                    ?>
-                                    <h3><?php echo $post_title; ?></h3>
-                                </div>
-                                <div class="except_block">
-                                    <p><?php the_excerpt(); ?></p>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endwhile; ?>
-                </div>
-                <div class="pagination_block">
-                    <?php $args = array(
-                        'prev_text'          => __('<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.47575 3.90299L0.850252 1.40101C0.751858 1.00743 1.23429 0.734285 1.52115 1.02115L4.21716 3.71716C4.37337 3.87337 4.37337 4.12663 4.21716 4.28284L1.52115 6.97885C1.23429 7.26571 0.751858 6.99257 0.850252 6.59899L1.47575 4.09701C1.49167 4.03332 1.49167 3.96668 1.47575 3.90299Z" fill="#084074" /></svg>'),
-                        'next_text'          => __('<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.47575 3.90299L0.850252 1.40101C0.751858 1.00743 1.23429 0.734285 1.52115 1.02115L4.21716 3.71716C4.37337 3.87337 4.37337 4.12663 4.21716 4.28284L1.52115 6.97885C1.23429 7.26571 0.751858 6.99257 0.850252 6.59899L1.47575 4.09701C1.49167 4.03332 1.49167 3.96668 1.47575 3.90299Z" fill="#084074" /></svg>'),
-                    ); ?>
-                    <?php echo get_the_posts_pagination( $args ) ?>
-                </div>
-            </div>
+
+<?php 
+
+$ajaxParams = array(
+    'post_type'      => 'post',
+    'posts_per_page' => (isset($_GET['ppp'])) ? $_GET['ppp'] : 15,
+    'page'           => (isset($_GET['page'])) ? $_GET['page'] : 1,
+);
+
+?>
+
+<?php
+
+get_template_part('template-parts/jobs-archive/jobs-archive','filters', $ajaxParams);
+
+
+?>
+
+
+<div class="container">
+    <div class="title_wrapper">
+        <div class="title">
+            <h2>All news</h2>
+        </div>
+        <div class="btn_block">
+            <p>Archive articles</p>
+            <!-- <div class="custom-select" style="">
+                <select name="select_year" id="select_year">
+                    <option value="sel" disabled="" selected="">Choose a year</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                </select>
+            </div> -->
+            <select name="archive-year-select" id="archive-year-select">
+                <option value="sel">Choose a year</option>
+                <option value="">2022</option>
+                <option value="">2021</option>
+                <option value="">2020</option>
+            </select>
         </div>
     </div>
-</section>
+</div>
+
+
+
+<div class="news-archive js-archive-container" data-page="1">
+
+    <?php
+        get_template_part('template-parts/news/news-archive','loop', $ajaxParams);
+        get_template_part('template-parts/news/news-archive','pagination', $ajaxParams);
+    ?>
+
+</div>
+
 <?php 
 $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_post_views_count', 'orderby' => 'meta_value_num', 'date_query' => array( array( 'column' => 'post_date_gmt', 'before' => 'this year', ),), 'order' => 'DESC'  ) );
 ?>
@@ -196,17 +186,4 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
         </div>
     </div>
 </section>
-<?php endif; ?>
-<script>
-    jQuery(document).ready(function(){
-        var prev = jQuery('.navigation.pagination .prev').length;
-        var next = jQuery('.navigation.pagination .next').length;
-        if(prev != 1){
-            jQuery('<a class="prev"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.47575 3.90299L0.850252 1.40101C0.751858 1.00743 1.23429 0.734285 1.52115 1.02115L4.21716 3.71716C4.37337 3.87337 4.37337 4.12663 4.21716 4.28284L1.52115 6.97885C1.23429 7.26571 0.751858 6.99257 0.850252 6.59899L1.47575 4.09701C1.49167 4.03332 1.49167 3.96668 1.47575 3.90299Z" fill="#084074" /></svg></a>').prependTo('.navigation.pagination .nav-links');
-        }
-        if(next != 1){
-            jQuery('<a class="next"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.47575 3.90299L0.850252 1.40101C0.751858 1.00743 1.23429 0.734285 1.52115 1.02115L4.21716 3.71716C4.37337 3.87337 4.37337 4.12663 4.21716 4.28284L1.52115 6.97885C1.23429 7.26571 0.751858 6.99257 0.850252 6.59899L1.47575 4.09701C1.49167 4.03332 1.49167 3.96668 1.47575 3.90299Z" fill="#084074" /></svg></a>').appendTo('.navigation.pagination .nav-links');
-        }
-    }); 
-</script>
 <?php get_footer(); ?>
