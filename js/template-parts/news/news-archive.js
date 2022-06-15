@@ -144,7 +144,7 @@ function news_filter() {
         }
 
         //Pagination
-        $(document).on('click', '.js-pagination-page', function (e) {
+        $(document).on('click', '.news-archive  .js-pagination-page', function (e) {
             e.preventDefault();
             var page = parseInt($(this).data('page'));
             container.data('page',page);

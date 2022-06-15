@@ -55,7 +55,7 @@ function vacancies_pagination() {
                         container.html(response);
                         container.removeClass('loading');
                         $('html, body').animate({
-                            scrollTop: jQuery('.vacancies_list').offset().top - 50
+                            scrollTop: jQuery('.vacancies_list').offset().top - 250
                         }, 'slow');
                     } else {
                         container.html('<h2>Nothing was found.</h2>');
@@ -66,7 +66,7 @@ function vacancies_pagination() {
         }
 
         //Pagination
-        $(document).on('click', '.js-pagination-page', function (e) {
+        $(document).on('click', '.vacancies-archive .js-pagination-page', function (e) {
             e.preventDefault();
             var page = parseInt($(this).data('page'));
             container.data('page',page);
@@ -74,14 +74,12 @@ function vacancies_pagination() {
 
             //let taxonomies = getTaxonomies();
             getPosts();
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $('.vacancies-archive').offset().top - 150
-            }, 1000);
+            // $([document.documentElement, document.body]).animate({
+            //     scrollTop: $('.vacancies-archive').offset().top + 500
+            // }, 1000);
 
-        });
+            // console.log($('.vacancies-archive').offset().top + 100);
 
-        $('.js-back-all').click(function(e){
-           
         });
 
     }

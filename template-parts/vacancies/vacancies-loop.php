@@ -27,11 +27,11 @@ if ( $query->have_posts() ) : ?>
 
             <div class="main_block">
                 <?php 
-                    $title = get_sub_field('title');
+                    $title = 'Our vacancies';
                     if($title): ?>
                         <div class="title_wrapper">
                             <div class="title">
-                                <h2><?php echo $title; ?></h2>
+                                <h2><?php echo 'Our vacancies'; ?></h2>
                             </div>
                         </div>
                     <?php endif; ?>
