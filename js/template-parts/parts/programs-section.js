@@ -6,7 +6,6 @@ function programs_slider() {
         let block = $(this);
         let slider = $(this).find('.programs_row');
 
-
         slider.slick({
             dots: true,
             arrows: false,
@@ -32,11 +31,20 @@ function programs_slider() {
                     breakpoint: 576,
                     settings: {
                         slidesToShow: 1,
-                        // centerMode: true,
                     }
                 }
             ]
         });
+
+        slider.on('wheel', (function (e) {
+            e.preventDefault();
+
+            if (e.originalEvent.deltaY < 0) {
+                $(this).slick('slickNext');
+            } else {
+                $(this).slick('slickPrev');
+            }
+        }));
 
     });
 }
