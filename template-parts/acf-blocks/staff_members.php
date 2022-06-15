@@ -73,7 +73,7 @@
         </div>
     </section>
 <script>
-    jQuery('.agency_list .agency_block').click(function(){
+    jQuery('.agency_list .agency_block').not('.agency_block.last').click(function(){
         var top = jQuery(this).offset().top + 340;
         jQuery('.member_popup').css('top', top + 'px');
         var name = jQuery(this).find('.bio_block .title p').html();

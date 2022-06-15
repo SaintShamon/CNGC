@@ -35,7 +35,7 @@
                 <div class="center_row">
                     <?php if($image): ?>
                         <div class="volonteer_block_img box_img"
-                            style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/assets/images/fill.png');">
+                            style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/wp-content/themes/CNGC/assets/images/fill.png');">
                         </div>
                     <?php endif; ?>
                     <?php if($donate_card_title || $donate_card_text || $donate_card_button): ?>

@@ -35,8 +35,10 @@ function header() {
             $('#button_top').removeClass('show');
         }
     });
+    $('header .search button').on('focus', function(){
+        $('#is-search-input-1226').focus();
+    });
 }
-
 
 export {
     header

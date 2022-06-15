@@ -29,6 +29,19 @@ function footer() {
         $('.top_header_block').removeClass('fixed_header');
         $('.bottom_header_block').removeClass('fixed_header');
     });
+
+    $(window).scroll(function(){
+        $(window).scrollTop(function(){
+            if ($(window).scrollTop() >= 300) {
+                function scrollEnd(){
+                    $('#button_top').removeClass('show');
+                }
+                $('#button_top').addClass('show');
+                setTimeout(scrollEnd, 3000);
+            };
+        });
+    });
+
 }
 
 

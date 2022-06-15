@@ -11,11 +11,11 @@ function programs_slider() {
             dots: true,
             arrows: false,
             slidesToShow: 4,
-            infinite: false,
-            speed: 500,
+            infinite: true,
+            speed: 3000,
             cssEase: 'linear',
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 1,
             responsive: [{
                     breakpoint: 1200,
                     settings: {

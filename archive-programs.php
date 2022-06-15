@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="img_block"
-        style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/assets/images/fill.png');">
+        style="background: center / cover no-repeat url('<?php echo $image; ?>'), top center repeat url('/wp-content/themes/CNGC/assets/images/fill.png');">
         <?php if($top_award_image || $bottom_award_image): ?>
         <div class="right_work_img">
             <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>
@@ -76,7 +76,6 @@
             <?php endif; ?>
             <div class="bottom_block">
                 <?php if($small_text): ?>
-                <?php echo $small_text; ?>
                 <?php endif; ?>
                 <?php if($pdf_file): ?>
                 <a href="<?php echo $pdf_file['url'];  ?>" class="button button--secondary">

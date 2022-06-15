@@ -16,43 +16,43 @@ if($banner): ?>
                     $bottom_award_image = get_field('bottom_award_image', 'options');
                 ?>
                 <?php if($title): ?>
-                    <div class="title_wrapper">
-                        <div class="title">
-                            <h1><?php echo $title; ?></h1>
-                        </div>
+                <div class="title_wrapper">
+                    <div class="title">
+                        <h1><?php echo $title; ?></h1>
                     </div>
+                </div>
                 <?php endif; ?>
                 <?php if(have_rows('banner_social_icons', 'options')): ?>
-                    <div class="bottom_wrapper">
-                        <div class="socials_block">
-                            <ul>
-                                <?php while(have_rows('banner_social_icons', 'options')): the_row(); ?>
-                                    <?php 
+                <div class="bottom_wrapper">
+                    <div class="socials_block">
+                        <ul>
+                            <?php while(have_rows('banner_social_icons', 'options')): the_row(); ?>
+                            <?php 
                                         $icon = get_sub_field('icon');
                                         $link = get_sub_field('link');
                                     ?>
-                                    <li>
-                                        <a class="img_36" href="<?php echo $link; ?>" target="_blank" rel="noopener noreferrer">
-                                            <?php if( !empty( $icon ) ): ?>
-                                                <?php echo file_get_contents(esc_url(wp_get_original_image_path($icon['id']))); ?>
-                                            <?php endif; ?>
-                                        </a>
-                                    </li>
-                                <?php endwhile; ?>
-                            </ul>
-                        </div>
+                            <li>
+                                <a class="img_36" href="<?php echo $link; ?>" target="_blank" rel="noopener noreferrer">
+                                    <?php if( !empty( $icon ) ): ?>
+                                    <?php echo file_get_contents(esc_url(wp_get_original_image_path($icon['id']))); ?>
+                                    <?php endif; ?>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                        </ul>
                     </div>
+                </div>
                 <?php endif; ?>
             </div>
         </div>
     </div>
     <div class="img_block"
-        style="background: center / cover no-repeat url('<?php echo $image['url']; ?>'), top center repeat url('/assets/images/fill.png');">
+        style="background: center / cover no-repeat url('<?php echo $image['url']; ?>'), top center repeat url('../wp-content/themes/CNGC/assets/images/fill.png');">
         <?php if($top_award_image || $bottom_award_image): ?>
-            <div class="right_work_img">
-                <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>
-                <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image ?>" alt=""><?php endif; ?>
-            </div>
+        <div class="right_work_img">
+            <?php if($top_award_image): ?><img src="<?php echo $top_award_image; ?>" alt=""><?php endif; ?>
+            <?php if($bottom_award_image): ?><img src="<?php echo $bottom_award_image ?>" alt=""><?php endif; ?>
+        </div>
         <?php endif; ?>
     </div>
 </section>
@@ -61,7 +61,7 @@ if($banner): ?>
 <?php if($main_post): ?>
 <section class="news_img_section section">
     <div class="container">
-        <div class="main_block">
+        <a class="main_block" href="<?php the_permalink($main_post->ID) ?>">
             <div class="img_block">
                 <img src="<?php echo get_the_post_thumbnail_url( $main_post->ID ) ?>" alt="">
             </div>
@@ -78,7 +78,7 @@ if($banner): ?>
                     <p><?php echo get_the_excerpt($main_post->ID); ?></p>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </section>
 <?php endif; ?>
@@ -150,18 +150,22 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
             <div class="content_wrapper">
                 <div class="news_list">
                     <?php while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>
-                        <div class="news_block" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="display: flex; flex-direction: column;"<?php endif; ?>>
-                            <?php if(!empty(get_the_post_thumbnail_url(  ))): ?>
-                                <div class="img_block">
-                                    <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
-                                </div>
-                            <?php endif; ?>
-                            <div class="inner_block" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="margin-top: auto;"<?php endif; ?>>
-                                <div class="date_block">
-                                    <span><?php echo get_the_date('F j, Y') ?></span>
-                                </div>
-                                <div class="title_block">
-                                    <?php 
+                    <div class="news_block"
+                        <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="display: flex; flex-direction: column;"
+                        <?php endif; ?>>
+                        <?php if(!empty(get_the_post_thumbnail_url(  ))): ?>
+                        <div class="img_block">
+                            <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
+                        </div>
+                        <?php endif; ?>
+                        <div class="inner_block"
+                            <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="margin-top: auto;"
+                            <?php endif; ?>>
+                            <div class="date_block">
+                                <span><?php echo get_the_date('F j, Y') ?></span>
+                            </div>
+                            <div class="title_block">
+                                <?php 
                                         $post_title = get_the_title();
                                         if(!empty(get_the_post_thumbnail_url(  ))){
                                             $max = 79;
@@ -172,14 +176,14 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 3, 'meta_key' => 'wpb_po
                                         if (strlen($post_title) > $max)
                                         $post_title = substr($post_title, 0, $max - 3) . '...';
                                     ?>
-                                    <h3><?php echo $post_title; ?></h3>
-                                </div>
-                                <div class="except_block">
-                                    <p><?php the_excerpt(); ?></p>
-                                </div>
+                                <h3><?php echo $post_title; ?></h3>
                             </div>
-                            <a href="<?php the_permalink(); ?>"></a>
+                            <div class="except_block">
+                                <p><?php the_excerpt(); ?></p>
+                            </div>
                         </div>
+                        <a href="<?php the_permalink(); ?>"></a>
+                    </div>
                     <?php endwhile; ?>
                 </div>
             </div>
