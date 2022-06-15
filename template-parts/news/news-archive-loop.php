@@ -23,24 +23,6 @@ $queryArgs = array(
     ),
 );
 
-
-// /**
-//  * Handle taxonomies into the query args
-//  */
-// if(isset($args['tax']) && $args['tax']):
-//     $queryArgs['tax_query'] = array(
-//         'relation' => 'AND'
-//     );
-//     foreach($args['tax'] as $key => $value):
-//         $arr = array (
-//             'taxonomy' => $key,
-//             'field' => 'term_id',
-//             'terms' => explode(',',$value),
-//         );
-//         array_push($queryArgs['tax_query'],$arr);
-//     endforeach;
-// endif; 
-
 $query = new WP_Query( $queryArgs );
 $amount = $query->found_posts;
 

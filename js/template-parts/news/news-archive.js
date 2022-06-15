@@ -78,7 +78,6 @@ function news_filter() {
 
         $('#archive-year-select').on('change', function() {
             var selected_option_value = $(this).find(":selected").text();
-            console.log(selected_option_value);
 
             getPosts(selected_option_value);
         });

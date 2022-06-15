@@ -93,14 +93,6 @@ $ajaxParams = array(
 
 ?>
 
-<?php
-
-get_template_part('template-parts/jobs-archive/jobs-archive','filters', $ajaxParams);
-
-
-?>
-
-
 <div class="container">
     <div class="title_wrapper">
         <div class="title">
