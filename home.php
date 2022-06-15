@@ -107,12 +107,44 @@ $ajaxParams = array(
                     <option value="">2020</option>
                 </select>
             </div> -->
+
+            <?php 
+
+            $terms_year = array(
+                'post_type'         => array('post'),
+                'posts_per_page' => '-1'
+            );
+
+            $years = array();
+            $query_year = new WP_Query( $terms_year );
+
+            if ( $query_year->have_posts() ) :
+                while ( $query_year->have_posts() ) : $query_year->the_post();
+                    $year = get_the_date('Y');
+                    if(!in_array($year, $years)){
+                        $years[] = $year;
+                    }
+                endwhile;
+                wp_reset_postdata();
+            endif;
+
+            if ($years) :
+
+            ?>
+
+
             <select name="archive-year-select" id="archive-year-select">
                 <option value="sel">Choose a year</option>
-                <option value="">2022</option>
-                <option value="">2021</option>
-                <option value="">2020</option>
+
+                <?php foreach ($years as $year) { ?>
+
+                    <option value=""><?php echo $year;?> </option>
+
+                <?php } ; ?>
+            
             </select>
+
+            <?php endif; ?>
         </div>
     </div>
 </div>
