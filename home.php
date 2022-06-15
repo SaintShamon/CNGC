@@ -113,7 +113,7 @@ $ajaxParams = array(
 
                 <?php foreach ($years as $year) { ?>
 
-                    <option value=""><?php echo $year;?></option>
+                    <option value=""><?php echo $year;?> </option>
 
                 <?php } ; ?>
             
