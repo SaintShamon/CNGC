@@ -27,29 +27,29 @@ $query = new WP_Query( $queryArgs );
 $amount = $query->found_posts;
 
 if ( $query->have_posts() ) : ?>
-    <section class="all_news section">
-        <div class="container">
-          
-            <ul class="news_list"> 
+<div class="content_wrapper">
+    <div class="container">
 
-                <?php while ( $query->have_posts() ) :
+        <ul class="news_list">
+
+            <?php while ( $query->have_posts() ) :
                     $query->the_post(); ?>
 
-                    <?php get_template_part( 'template-parts/news/news','card'); ?>
+            <?php get_template_part( 'template-parts/news/news','card'); ?>
 
-                <?php endwhile; ?>
+            <?php endwhile; ?>
 
-            </ul>
-        </div>
-    </section>
+        </ul>
+    </div>
+</div>
 <?php else: ?>
 
-    <section class="arhive-posts">
-        <div class="container">
-            <div class="content-block">
-                <h3><?php _e('No results found.','tech-talent'); ?></h3>
-            </div>
+<section class="arhive-posts">
+    <div class="container">
+        <div class="content-block">
+            <h3><?php _e('No results found.','tech-talent'); ?></h3>
         </div>
-    </section>
+    </div>
+</section>
 
 <?php endif; wp_reset_postdata(); ?>

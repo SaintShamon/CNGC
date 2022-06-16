@@ -6,7 +6,6 @@ function all_sponsors_slider() {
         let block = $(this);
         let slider = $(this).find('.sponsors_row');
 
-
         slider.slick({
             dots: false,
             arrows: false,
@@ -47,7 +46,6 @@ function all_sponsors_slider() {
                     settings: {
                         slidesToShow: 1,
                         variableWidth: false,
-                        // centerMode: true,
                     }
                 }
             ]
