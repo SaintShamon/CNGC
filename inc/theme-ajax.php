@@ -19,6 +19,7 @@ function news_ajax()
         'post_type'      => 'post',
         'posts_per_page' => (isset($_POST['ppp'])) ? $_POST['ppp'] : 15,
         'page'           => (isset($_POST['page'])) ? $_POST['page'] : 1,
+        'year'           => $_POST['year']
     );
 
     if (isset($_POST['date'])) : 
@@ -36,7 +37,7 @@ add_action('wp_ajax_news_ajax', 'news_ajax');
 
 
 /**
-*  News ajax
+*  Vacancies ajax
 */
 function vacancies_ajax()
 {

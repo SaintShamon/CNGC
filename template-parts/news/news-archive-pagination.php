@@ -15,6 +15,11 @@ $queryArgs = array(
     'posts_per_page' => -1,
     'paged' => $args['page'],
     'post_status'     => 'publish',
+    'date_query' => array(
+        array(
+            'year'  => $args['year'],
+        ),
+    ),
 );
 
 $posts = get_posts($queryArgs);

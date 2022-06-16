@@ -89,6 +89,7 @@ $ajaxParams = array(
     'post_type'      => 'post',
     'posts_per_page' => (isset($_GET['ppp'])) ? $_GET['ppp'] : 15,
     'page'           => (isset($_GET['page'])) ? $_GET['page'] : 1,
+    'year'           => $_GET['year']
 );
 
 ?>

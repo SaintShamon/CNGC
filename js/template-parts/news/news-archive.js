@@ -78,7 +78,7 @@ function news_filter() {
 
         $('#archive-year-select').on('change', function() {
             var selected_option_value = $(this).find(":selected").text();
-
+            container.data('page', 1);
             getPosts(selected_option_value);
         });
         
@@ -98,12 +98,17 @@ function news_filter() {
             // url.searchParams.delete('job_location');
             
             url.searchParams.delete('page');
-            url.searchParams.delete('search');
+            url.searchParams.delete('year');
+            if (data.year != "Choose a year") {
+                url.searchParams.set('year', data.year);
+            } else {
+                data.year = ""
+            }
             // for (const [key, value] of Object.entries(taxonomies)) {
             //     url.searchParams.set(key, value);
             // }
             url.searchParams.set('page', data.page);
-            url.searchParams.set('year', data.year);
+            //url.searchParams.set('year', data.year);
             //url.searchParams.set('search', data.search);
 
             window.history.replaceState(null, null, url);
@@ -150,8 +155,11 @@ function news_filter() {
             container.data('page',page);
 
 
-            //let taxonomies = getTaxonomies();
-            getPosts();
+            let year = $('#archive-year-select').find(":selected").text();
+
+            console.log(page);
+
+            getPosts(year);
             $([document.documentElement, document.body]).animate({
                 scrollTop: $('.js-archive-container').offset().top-150
             }, 1000);

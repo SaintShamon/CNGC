@@ -18,7 +18,7 @@ $queryArgs = array(
     'post_status'     => 'publish',
     'date_query' => array(
         array(
-            'year'  => $_POST['year'],
+            'year'  => $args['year'],
         ),
     ),
 );
