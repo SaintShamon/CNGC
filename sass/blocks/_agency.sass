@@ -129,6 +129,13 @@
     .agency
         .agency_block
             min-height: 544px
++max-screen(892px)
+    .agency
+        .agency_block
+            .email_block
+                height: auto
+                position: relative
+                margin-top: 0
 +max-screen($breakpoint-md)
     .agency
         .agency_block
@@ -199,7 +206,7 @@
         width: 90%
     +max-screen($breakpoint-md)
         position: absolute
-        height: 75vh
+        height: auto
     .opened-popup &
         opacity: 1
         visibility: visible
