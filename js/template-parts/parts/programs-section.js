@@ -10,11 +10,13 @@ function programs_slider() {
             dots: true,
             arrows: false,
             slidesToShow: 4,
+            slidesToScroll: 2,
             infinite: true,
-            speed: 3000,
+            speed: 2250,
             cssEase: 'linear',
             autoplay: true,
-            autoplaySpeed: 1,
+            autoplaySpeed: 2250,
+            pauseOnHover: true,
             responsive: [{
                     breakpoint: 1200,
                     settings: {
@@ -45,8 +47,8 @@ function programs_slider() {
                 $(this).slick('slickPrev');
             }
         }));
-
     });
+
 }
 
 export {

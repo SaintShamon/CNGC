@@ -74,12 +74,6 @@ import {
 } from './template-parts/news/news-archive';
 
 import {
-    vacancies_pagination
-} from './template-parts/vacancies/vacancies-pagination';
-
-
-
-import {
     disabledItem
 } from './template-parts/blocks/form';
 
@@ -117,8 +111,6 @@ scrollToAnchor();
 events_slider();
 
 news_filter();
-vacancies_pagination();
 form_select();
 // news_block();
 // article_block();
-
