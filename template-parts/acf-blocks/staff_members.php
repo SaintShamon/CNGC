@@ -41,7 +41,9 @@
                                 <?php if($name): ?>
                                     <div class="title">
                                         <p><?php echo $name; ?></p>
-                                        <span>BIO</span>
+                                        <?php if($popup_text): ?>
+                                            <span>BIO</span>
+                                         <?php endif; ?>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($position): ?>
