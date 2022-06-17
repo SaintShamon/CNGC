@@ -156,6 +156,19 @@ $two_col_text__image = get_field('two_columns_text__image');
 </section>
 <?php endif; ?>
 <?php 
+    $text_block = get_field('text_block_wrapper');
+    $text_block = $text_block['text_block'];
+?>
+<?php if(!empty($text_block)): ?>
+<section class="text_block">
+    <div class="container">
+        <div class="content-block">
+            <?php echo $text_block; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+<?php 
 $text__white_background = get_field('text_with_white_background');
 if($text__white_background):
 ?>
