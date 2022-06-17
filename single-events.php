@@ -34,7 +34,7 @@
                 <div class="bottom_wrapper">
                     <div class="bottom_row">
                         <div class="date">
-                            <span><?php echo $date->format('l, F j, Y') ?></span>
+                            <span><?php if ($date) : echo $date->format('l, F j, Y'); endif; ?></span>
                         </div>
                         <?php if($place): ?>
                         <div class="adres">
