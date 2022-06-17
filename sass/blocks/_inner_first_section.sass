@@ -4,6 +4,9 @@
     overflow: hidden
     padding-top: 0
     padding-bottom: 0
+    .h1, h1
+        +min-screen($breakpoint-xl)
+            font-size: 84px
     &.down_content
         .text_block
             max-width: 752px

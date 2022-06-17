@@ -17,8 +17,12 @@
                     $rightButton = $hero['right_button'];
                     $top_award_image = get_field('top_award_image', 'options');
                     $bottom_award_image = get_field('bottom_award_image', 'options');
+
+
                     $date_string = get_field('event_date'); 
-                    $date = DateTime::createFromFormat('Ymd', $date_string);
+                    if ($date_string) : 
+                        $date = DateTime::createFromFormat('Ymd', $date_string);
+                    endif;
                 ?>
                 <?php if($title): ?>
                 <div class="title_wrapper">

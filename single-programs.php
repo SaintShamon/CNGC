@@ -120,7 +120,7 @@ $two_col_text__image = get_field('two_columns_text__image');
                     </div>
                 <?php endif; ?>
             </div>
-            <?php if($image): ?>
+            <?php if($image && false): ?>
             <div class="image_center_block">
                 <img src="<?php echo $image; ?>" alt="">
             </div>
@@ -129,13 +129,17 @@ $two_col_text__image = get_field('two_columns_text__image');
     </div>
 </section>
 <?php endif; ?>
-<?php $blue_block = get_field('blue_block'); ?>
-<?php if($blue_block): ?>
+<?php 
+
+$blue_block = get_field('blue_block');
+$title = $blue_block['title'];
+$text = $blue_block['text'];
+?>
+<?php if($title || $text): ?>
 <section class="mission section">
     <div class="section-bg"></div>
     <?php 
-        $title = $blue_block['title'];
-        $text = $blue_block['text'];
+        
     ?>
     <div class="container">
         <div class="main_block">
