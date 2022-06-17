@@ -1,15 +1,15 @@
-
-
-            <div class="vacancies-archive js-archive-container" data-page="1">
-
-                <?php
-                    get_template_part('template-parts/vacancies/vacancies','loop', $ajaxParams);
-                    get_template_part('template-parts/vacancies/vacancies','pagination', $ajaxParams);
-                ?>
-
+<section class="vacancies section">
+    <div class="container">
+        <div class="main_block">
+            <?php 
+                $title = get_sub_field('title');
+            ?>
+            <?php if($title): ?>
+            <div class="title_wrapper">
+                <div class="title">
+                    <h2><?php echo $title; ?></h2>
+                </div>
             </div>
-<<<<<<< Updated upstream
-=======
             <?php endif; ?>
             <?php 
             $args = array(
@@ -113,4 +113,3 @@
         </div>
     </div>
 </section>
->>>>>>> Stashed changes

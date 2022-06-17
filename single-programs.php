@@ -11,10 +11,11 @@
                     $image = $banner['image'];
                     $top_award_image = get_field('top_award_image', 'options');
                     $bottom_award_image = get_field('bottom_award_image', 'options');
+                    $font_size = $banner['decrease_font_size'];
                 ?>
                 <?php if($title): ?>
-                    <div class="title_wrapper">
-                        <div class="title">
+                    <div class="title_wrapper<?php if($font_size == true){echo ' sm_font_size';} ?>">
+                        <div class="title h1">
                             <h1><?php echo $title; ?></h1>
                         </div>
                     </div>
@@ -66,7 +67,7 @@ $two_col_text = get_field('two_columns_text');
                 $left_column_text = $two_col_text['left_column_text'];
                 $right_column_text = $two_col_text['right_column_text'];
             ?>
-            <div class="content_wrapper">
+            <div class="content_wrapper <?php if(empty($left_column_text) || empty($right_column_text)){echo 'full_width_col';} ?>">
                 <?php if($left_column_text): ?>
                     <div class="col content-block">
                         <div class="text--size--26">

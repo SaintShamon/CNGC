@@ -26,6 +26,11 @@
 
     .title_wrapper
         padding-bottom: 40px
+        &.sm_font_size
+            h1 
+                font-size: 0.55em
+                +max-screen($breakpoint-xxl)
+                    font-size: 0.8em
         &::after
             background-color: #fff
 

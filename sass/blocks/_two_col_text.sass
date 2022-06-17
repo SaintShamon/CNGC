@@ -7,6 +7,8 @@
         display: grid
         grid-template-columns: repeat(2,1fr)
         gap: 30px
+        &.full_width_col 
+            grid-template-columns: repeat(1,1fr)
         +max-screen($breakpoint-md)
             grid-template-columns: repeat(1,1fr)
     .col
