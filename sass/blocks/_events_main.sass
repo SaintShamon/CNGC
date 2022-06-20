@@ -34,6 +34,10 @@
         display: flex
         justify-content: space-between
         margin-bottom: 43px
+        min-height: 98px
+        +max-screen(700px)
+            min-height: 88px
+            min-height: 505px
     .date
         position: absolute
         left: 40px
@@ -174,7 +178,7 @@
         .event_block_blue
             --padding: 30px
             margin: 0 auto
-            max-width: 360px
+            max-width: 460px
             text-align: center
             a.button
                 position: relative
