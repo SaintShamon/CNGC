@@ -7,6 +7,10 @@
     .h1, h1
         +min-screen($breakpoint-xl)
             font-size: 84px
+        span
+            +min-screen($breakpoint-xl)
+                font-size: 90px
+                display: block
     &.down_content
         .text_block
             max-width: 752px
@@ -109,7 +113,7 @@
         width: 100%
     .date
         width: max-content
-        max-width: 250px
+        max-width: 270px
     .adres
         width: 100%
         max-width: 236px

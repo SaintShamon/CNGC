@@ -87,20 +87,20 @@ $two_col_text = get_field('two_columns_text');
     </div>
 </section>
 <?php endif; ?>
+
+
 <?php 
 $two_col_text__image = get_field('two_columns_text__image');
+$title = $two_col_text__image['title'];
+$image = $two_col_text__image['image'];
+$left_column_text = $two_col_text__image['left_column_text'];
+$right_column_text = $two_col_text__image['right_column_text'];
 ?>
-<?php if($two_col_text__image): ?>
+<?php if($two_col_text__image && $left_column_text || $right_column_text): ?>
 <section class="our_services section">
     <div class="section-bg"></div>
     <div class="container">
         <div class="main_block">
-            <?php 
-                $title = $two_col_text__image['title'];
-                $image = $two_col_text__image['image'];
-                $left_column_text = $two_col_text__image['left_column_text'];
-                $right_column_text = $two_col_text__image['right_column_text'];
-            ?>
             <?php if($title): ?>
                 <div class="title_wrapper">
                     <div class="title">
@@ -174,19 +174,21 @@ $text = $blue_block['text'];
 <?php endif; ?>
 <?php 
 $text__white_background = get_field('text_with_white_background');
-if($text__white_background):
+
+$title = $text__white_background['block_title'];
+$text = $text__white_background['block_subtitle'];
+$white_block_text = $text__white_background['white_block_text'];
+$white_block_small_text = $text__white_background['white_block_small_text'];
+$right_side_text = $text__white_background['right_side_text'];
+$right_side_small_text = $text__white_background['right_side_small_text'];
+
+
+if($text || $white_block_text || $right_side_text):
+
 ?>
 <section class="refferal section">
     <div class="container">
         <div class="main_block">
-            <?php 
-                $title = $text__white_background['block_title'];
-                $text = $text__white_background['block_subtitle'];
-                $white_block_text = $text__white_background['white_block_text'];
-                $white_block_small_text = $text__white_background['white_block_small_text'];
-                $right_side_text = $text__white_background['right_side_text'];
-                $right_side_small_text = $text__white_background['right_side_small_text'];
-            ?>
             <?php if($title): ?>
                 <div class="title_wrapper">
                     <div class="title">

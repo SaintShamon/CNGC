@@ -12,7 +12,7 @@ get_header(); ?>
     <div class="section-bg"></div>
     <div class="container">
         <div class="main_block">
-            <div class="text_block">
+            <div class="text_block" <?php if (!$image) : echo 'style="max-width: 100%;"'; endif;?>>
                 <?php 
                     $title = get_field('banner_title');
                     $image = get_field('banner_image');
