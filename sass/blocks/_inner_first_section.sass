@@ -9,8 +9,12 @@
             font-size: 84px
         span
             +min-screen($breakpoint-xl)
-                font-size: 90px
+                font-size: 84px
                 display: block
+        span.small
+            font-size: .55em
+            font-family: $font-family-base
+            line-height: 1
     &.down_content
         .text_block
             max-width: 752px
@@ -97,7 +101,8 @@
         margin-right: calc(-1 * (100vw / 2))
         z-index: 1
         border-bottom-right-radius: 50%
-        background-blend-mode: soft-light, normal
+        background-position: top
+
 
     .right_work_img
         position: absolute

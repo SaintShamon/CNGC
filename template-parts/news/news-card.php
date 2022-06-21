@@ -1,10 +1,13 @@
-<div class="news_block" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="display: flex; flex-direction: column;"<?php endif; ?>>
-    <?php if(!empty(get_the_post_thumbnail_url(  ))): ?>
+<?php $image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_field('banner_image') ;?>
+
+<div class="news_block" <?php if(!$image): ?>style="display: flex; flex-direction: column;"<?php endif; ?>>
+
+    <?php if($image): ?>
         <div class="img_block">
-            <img src="<?php the_post_thumbnail_url(  ); ?>" alt="">
+            <img src="<?php echo $image; ?>" alt="">
         </div>
     <?php endif; ?>
-    <div class="inner_block" <?php if(empty(get_the_post_thumbnail_url(  ))): ?>style="margin-top: auto;"<?php endif; ?>>
+    <div class="inner_block" <?php if(!$image): ?>style="margin-top: auto;"<?php endif; ?>>
         <div class="date_block">
             <span><?php echo get_the_date('F j, Y') ?></span>
         </div>

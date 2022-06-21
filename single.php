@@ -7,7 +7,9 @@
  * @package CNGC
  */
 
-get_header(); ?>
+get_header();
+
+$image = get_field('banner_image') ? get_field('banner_image') : get_the_post_thumbnail_url() ;?>
 <section class="inner_first_section article_first_section section">
     <div class="section-bg"></div>
     <div class="container">
@@ -15,7 +17,7 @@ get_header(); ?>
             <div class="text_block" <?php if (!$image) : echo 'style="max-width: 100%;"'; endif;?>>
                 <?php 
                     $title = get_field('banner_title');
-                    $image = get_field('banner_image');
+                    
                     $top_award_image = get_field('top_award_image', 'options');
                     $bottom_award_image = get_field('bottom_award_image', 'options');
                 ?>
