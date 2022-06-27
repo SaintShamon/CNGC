@@ -53,7 +53,7 @@
                         <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
                     </nav>
                     <div class="header_logo">
-                        <a href="#">
+                        <a href="<?php echo get_home_url(); ?>">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/logo_white.svg" alt="">
                         </a>
                     </div>
